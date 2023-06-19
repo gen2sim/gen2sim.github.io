@@ -78,11 +78,49 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
+          <p>
+            We propose Gen2Sim a method for scaling up development of simulation environments task definitions and reward functions with 
+            minimal human involvement by capitalizing over large scale pre-trained generative models of language and images, 
+            one step towards fully autonomous robotic manipulation skill acquisition in simulation. 
+            We generate high fidelity 3D models from a single real or generated image of an object by differentiable 
+            3D model fitting that maximizes likelihood of a pre-trained view and pose conditioned image diffusion model. 
+            Our method  queries Large Language Models (LLMs) for plausible ranges of physical parameters for the generated assets, 
+            enabling reasonable simulated behavior. Our method then chain-of-thought prompts LLMs to parse URDF files of 
+            generated or human-developed assets, and create language task descriptions and corresponding reward functions 
+            based on the assets' affordances. We demonstrate our method effectively generates meaningful tasks and 
+            credible reward functions that can be utilized by readily available RL methods for downstream skill learning. 
+            Our work contributes thousands of simulated environments and task variations for articulated and novel 3D object assets, 
+            establishing a fully automated pipeline that supports continual simulation development for robotics. 
+          </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
+</section>
+
+<section class="hero teaser">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Generated 3D Assets</h2>
+      <div class="publication-video">
+        <iframe 
+          src="https://drive.google.com/file/d/1q34j1FqfK73uBCspSHT52kIItOAr_CnX/preview" width="640" height="480" allow="autoplay">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-4">Generated Tasks</h2>
+      <div class="publication-video">
+        <iframe src="https://drive.google.com/file/d/1mJEN_B7r6_TtXndvWuoNTeQfksZIfhVa/preview" width="640" height="480" allow="autoplay"></iframe>
+      </div>
+    </div>
+  </div>
 </section>
 
 <div class="container is-fullhd">
@@ -92,18 +130,23 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Learned Skills</h2>
+    <div class="columns is-centered">
+        <h3 class="title is-5">Real-world Verification</h3>
+        <div class="content has-text-centered">
+          <div class="publication-video">
+            <iframe src="https://drive.google.com/file/d/1eZK2IOoTpO0snJnwU7tHtG1vl3_qC4f4/preview" width="640" height="480" allow="autoplay"></iframe>
+          </div>
+          <div class="publication-video">
+            <iframe src="https://drive.google.com/file/d/1IEJwX00pfkSwl6Hye3jrx-58E9a-WOG5/preview" width="640" height="480" allow="autoplay"></iframe>
+          </div>
+          <div class="publication-video">
+            <iframe src="https://drive.google.com/file/d/1YHw97T7e7ltRUi90ofHR4dTr-qqBEeKf/preview" width="640" height="480" allow="autoplay"></iframe>
+          </div>
+        </div>
       </div>
     </div>
-    <br> 
   </div>
 </section>
-
-
-
 
 </body>
 </html>
