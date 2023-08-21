@@ -99,18 +99,39 @@
 
 </section>
 
+<style>
+  .videos-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .video-wrapper {
+    flex: 1;
+    margin: 0 5px;
+  }
+</style>
+
 <section class="hero teaser">
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
-      <h2 class="title is-3">Generated 3D Assets</h2>
+      <h2 class="title is-4">Generated 3D Assets, Environments and Physics Validation</h2>
       <div class="content has-text-centered">
-        <div class="video-container">
-          <video id="3d_assets" autoplay muted loop playsinline height="640" width="640">
-            <source src="./static/videos/3d_assets.mp4" type="video/mp4">
-          </video>
-          <video id="another_video" autoplay muted loop playsinline height="640" width="640">
-            <source src="./static/videos/3d_assets_2.mp4" type="video/mp4">
-          </video>
+        <div class="videos-container">
+          <div class="video-wrapper">
+            <video id="tasks1" autoplay muted loop playsinline height="360" width="360">
+              <source src="./static/videos/3d_assets.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video id="tasks2" autoplay muted loop playsinline height="360" width="360">
+              <source src="./static/videos/3d_assets_2.mp4" type="video/mp4"> <!-- Update with your second video source -->
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video id="tasks3" autoplay muted loop playsinline height="360" width="360">
+              <source src="./static/videos/physics.mp4" type="video/mp4"> <!-- Update with your third video source -->
+            </video>
+          </div>
         </div>
       </div>
     </div>
@@ -122,28 +143,18 @@
     <div class="column is-four-fifths">
       <h2 class="title is-3">Generated Tasks and Policies</h2>
       <div class="content has-text-centered">
-        <video id="tasks" autoplay muted loop playsinline height="640" width="640">
-          <source src="./static/videos/articulated_policy.mp4"
-                  type="video/mp4">
-        </video>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="container is-fullhd">
-  <hr class="solid">
-</div>
-
-<section class="hero teaser">
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <h2 class="title is-3">Physics Validation of Generated Assets</h2>
-      <div class="content has-text-centered">
-        <video id="tasks" autoplay muted loop playsinline height="640" width="640">
-          <source src="./static/videos/physics.mp4"
-                  type="video/mp4">
-        </video>
+        <div class="videos-container">
+          <div class="video-wrapper">
+            <video id="tasks1" autoplay muted loop playsinline height="720" width="720">
+              <source src="./static/videos/articulated_policy.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video id="tasks2" autoplay muted loop playsinline height="720" width="720">
+              <source src="./static/videos/articulated_policy.mp4" type="video/mp4"> <!-- Update with your second video source -->
+            </video>
+          </div>
+        </div>
       </div>
     </div>
   </div>
