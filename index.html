@@ -18,7 +18,9 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css" />
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -111,6 +113,16 @@
   }
 </style>
 
+<style>
+    /* Add some CSS styling to the code block container */
+    .code-block {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+        overflow: auto;
+    }
+</style>
+
 <section class="hero teaser">
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
@@ -138,6 +150,21 @@
   </div>
 </section>
 
+<section class="hero teaser">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-4">Prompts</h2>
+      <div class="content has-text-centered">
+        <div class="code-block">
+          <code class="language-python">
+            <object type="text/plain" data="./static/codes/articulate.py"> </object>
+          </code>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
 <section class="hero teaser">
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
