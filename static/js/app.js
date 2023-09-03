@@ -1,10 +1,10 @@
-$(document).ready(function() {
-    // bibtex
-    var editor = CodeMirror.fromTextArea(document.getElementById("bibtex"), {
-        lineNumbers: false,
-        lineWrapping: true,
-        readOnly:true
-    });
+// $(document).ready(function() {
+//     // bibtex
+//     var editor = CodeMirror.fromTextArea(document.getElementById("bibtex"), {
+//         lineNumbers: false,
+//         lineWrapping: true,
+//         readOnly:true
+//     });
 
     // generated code
 //     var codegen_html_template = `
@@ -20,7 +20,7 @@ $(document).ready(function() {
         var domain_name = domain_name_cmd_idx.substring(0, sep_idx);
         var cmd_idx_str = domain_name_cmd_idx.substring(sep_idx + 1);
 
-        var codegen_file = '/codegen/' + domain_name + '/' + cmd_idx_str + '.txt';
+        var codegen_file = './static/codegen/' + domain_name + '/' + cmd_idx_str + '.txt';
         $.get(codegen_file, function(data) {
             var highlighted_code = hljs.highlight(data, {language: 'python'}).value;
             var html_code = codegen_html_template
@@ -36,19 +36,17 @@ $(document).ready(function() {
 
     var vid_start_times = {
         "pepper": {
-            1: 0 * 60 + 3, /* Open Cabinet Door */
-            2: 1 * 60 + 34, /* Pick Green Pepper */
-            3: 2 * 60 + 18, /* Place the Green Pepper in the Cabinet */
-            4: 2 * 60 + 51 /* Close Cabinet Door */
+            1: 1, /* Open Cabinet Door */
+            2: 10 /* Pick Green Pepper */
+            // 3: 2 * 60 + 18, /* Place the Green Pepper in the Cabinet */
+            // 4: 2 * 60 + 51 /* Close Cabinet Door */
         }
     }
 
     var vid_end_times = {
         "pepper": {
-            1: 1 * 60 + 32,
-            2: 2 * 60 + 17,
-            3: 2 * 60 + 50,
-            4: 3 * 60 + 3,
+            1: 9,
+            2: 19
         }
     }
 

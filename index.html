@@ -235,6 +235,74 @@ Q: What is the reward function, success condition to perform task Pick up Apple?
   </div>
 </section>
 
+<section class="hero teaser">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-4">Generated Subtasks and Rewards</h2>
+      <div class="card mb-4 mt-4 text-dark bg-light">
+        <h5 class="card-header">Task: Put the Green Pepper in the Storage Furniture </h5>
+        <div class="card-body">
+            <p>Choose a command:</p>
+            <select class="form-select" size="5" aria-label="size 5 select example">
+                <option value="pepper_1">
+                    1) Open Cabinet Door
+                </option>
+                <option value="pepper_2">
+                    2) Pick Green Pepper 
+                </option>
+                <!-- <option value="pepper_3">
+                    3) Place the Green Pepper in the Cabinet
+                </option>
+                <option value="pepper_4">
+                    4) Close Cabinet Door
+                </option>  -->
+            </select>
+            <div class="col-md-12 mb-2">
+                <video id="vid_blocks" width="100%" preload="metadata" playsinline controls>
+                    <source src="./static/videos/pepper.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="row" id="content_pepper_1">
+                <div class="col-md-12" id="code_blocks_1">
+                </div>
+            </div>
+
+            <div class="row" id="content_pepper_2" style="display:none">
+                <div class="col-md-12" id="code_blocks_2">
+                </div>
+            </div>
+
+            <!-- <div class="row" id="content_pepper_3" style="display:none">
+                <div class="col-md-12" id="code_blocks_3">
+                </div>
+            </div>
+
+            <div class="row" id="content_pepper_4" style="display:none">
+                <div class="col-md-12" id="code_blocks_4">
+                </div>
+            </div> -->
+<!-- 
+            <div class="row">
+                <p>
+                    Prompts (same for all tabletop manipulation tasks):
+                    <br>
+                    <a href="https://code-as-policies.github.io/prompts/tabletop_ui.txt">High-Level UI</a> |
+                    <a href="https://code-as-policies.github.io/prompts/parse_obj_name.txt">Parse Object Names</a> |
+                    <a href="https://code-as-policies.github.io/prompts/parse_position.txt">Parse Positions</a> |
+                    <a href="https://code-as-policies.github.io/prompts/parse_question.txt">Parse Questions</a> |
+                    <a href="https://code-as-policies.github.io/prompts/fgen.txt">Function Generation</a>
+                </p>
+            </div> -->
+
+        </div>
+    </div>
+     
+
+
+    </div>
+  </div>
+</section>
 <div class="container is-fullhd">
   <hr class="solid">
 </div>
