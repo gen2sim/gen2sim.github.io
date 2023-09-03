@@ -1,10 +1,10 @@
-// $(document).ready(function() {
-//     // bibtex
-//     var editor = CodeMirror.fromTextArea(document.getElementById("bibtex"), {
-//         lineNumbers: false,
-//         lineWrapping: true,
-//         readOnly:true
-//     });
+$(document).ready(function() {
+    // bibtex
+    // var editor = CodeMirror.fromTextArea(document.getElementById("bibtex"), {
+    //     lineNumbers: false,
+    //     lineWrapping: true,
+    //     readOnly:true
+    // });
 
     // generated code
 //     var codegen_html_template = `
