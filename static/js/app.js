@@ -37,7 +37,7 @@ $(document).ready(function() {
     var vid_start_times = {
         "pepper": {
             1: 1, /* Open Cabinet Door */
-            2: 5 /* Pick Green Pepper */
+            2: 4 /* Pick Green Pepper */
             // 3: 2 * 60 + 18, /* Place the Green Pepper in the Cabinet */
             // 4: 2 * 60 + 51 /* Close Cabinet Door */
         }
@@ -45,8 +45,8 @@ $(document).ready(function() {
 
     var vid_end_times = {
         "pepper": {
-            1: 4,
-            2: 8
+            1: 3,
+            2: 5
         }
     }
 
