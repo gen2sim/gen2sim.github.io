@@ -194,3 +194,8 @@ hr.solid {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+pre.codegen {
+  height: 300px;
+  overflow-y: scroll;
+}
