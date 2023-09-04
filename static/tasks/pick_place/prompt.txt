@@ -1,0 +1,18 @@
+# Task: OpenCabinetDoor
+
+def compute_reward(self):
+    # reward function
+    door_handle_pose = self.env.get_position_by_asset_link_name("cabinet", "handle_3")
+    gripper_pose = self.env.get_robot_gripper_position()
+    distance_gripper_to_handle = torch.norm(door_handle_pose - gripper_pose, dim=-1)
+    door_state = self.env.get_state_by_asset_joint_name("cabinet", "joint_1")
+    cost = distance_gripper_to_handle - door_state
+    reward = - cost
+
+    # success condition
+    target_door_state = torch.tensor([1.0]).to(self.env.device)
+    target_door_state = target_door_state.unsqueeze(0).repeat(self.env.env_num, 1)
+    success = torch.abs(door_state - target_door_state) < 0.1
+
+    return reward, success
+

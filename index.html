@@ -137,106 +137,31 @@
     }
 </style>
 
+
+
 <section class="section">
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
-      <h2 class="title is-4">Generated 3D Assets, Environments and Physics Validation</h2>
+      <h1 class="title is-3">Results</h1>
+      <h2 class="title is-5">Generated 3D Assets</h2>
       <div class="content has-text-centered">
         <div class="videos-container">
           <div class="video-wrapper">
-            <video id="tasks1" autoplay muted loop playsinline height="360" width="360">
+            <video id="tasks1" autoplay muted loop playsinline>
               <source src="./static/videos/3d_assets.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-wrapper">
-            <video id="tasks2" autoplay muted loop playsinline height="360" width="360">
+            <video id="tasks2" autoplay muted loop playsinline>
               <source src="./static/videos/3d_assets_2.mp4" type="video/mp4"> <!-- Update with your second video source -->
             </video>
           </div>
-          <div class="video-wrapper">
-            <video id="tasks3" autoplay muted loop playsinline height="360" width="360">
-              <source src="./static/videos/physics.mp4" type="video/mp4"> <!-- Update with your third video source -->
-            </video>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--section class="hero teaser">
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <h2 class="title is-4">Prompts</h2>
-      <div class="content has-text-centered">
-        <div class="code-block">
-          <pre><code class="language-python">
-Q: The simulation environment has the following asset configuration:
-
-1.  asset_name: "microwave", asset_type: "articulate",
-    part_cofiguration:
-        Part 1: "door"
-            - link_name: "link_0"
-            - joint_name: "joint_0"
-            - joint_type: "revolute"
-            - joint_lower_limit: 0
-            - joint_upper_limit: 1
-        Part 2: "handle"
-            - link_name: "handle_0"
-            - joint_name: "handlejoint_0"
-            - joint_type: "fixed"
-
-Available APIs from simulator are:
-1. get_position_by_asset_link_name(asset_name, link_name) # returns the x, y, z position of the link
-2. get_robot_gripper_position(asset_name, link_name) # returns the x, y, z position of the gripper
-3. get_state_by_asset_joint_name(asset_name, joint_name) # returns the state of the link
-4. get_joint_limits(asset_name) # returns the lower, upper limit of the joint
-
-What is the reward function, success condition to perform task OpenMicrowaveDoor?
-
-A:
-Task: OpenMicrowaveDoor
-```
-def compute_reward(self):
-    # reward function
-    door_handle_pose = self.env.get_position_by_asset_link_name("microwave", "handle_0")
-    gripper_pose = self.env.get_robot_gripper_position()
-    distance_gripper_to_handle = torch.norm(door_handle_pose - gripper_pose, dim=-1)
-    door_state = self.env.get_state_by_asset_joint_name("microwave", "joint_0")
-    cost = distance_gripper_to_handle - door_state
-    reward = - cost
-
-    # success condition
-    target_door_state = self.env.get_joint_upper_limit("microwave", "joint_0")
-    success = torch.abs(door_state - target_door_state) < 0.1
-
-    return reward, success
-```
-
-Q: What is the reward function, success condition to perform task Pick up Apple?
-          </code></pre>
-        </div>
-      </div>
-    </div>
-  </div>
-</section-->
-  
-<section class="section">
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <h2 class="title is-4">Generated Tasks and Policies</h2>
-      <div class="content has-text-centered">
-        <div class="videos-container">
-          <div class="video-wrapper">
-            <video id="tasks1" autoplay muted loop playsinline height="720" width="720">
-              <source src="./static/videos/articulated_policy.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video id="tasks2" autoplay muted loop playsinline height="720" width="720">
-              <source src="./static/videos/pick_place_policy.mp4" type="video/mp4"> <!-- Update with your second video source -->
-            </video>
-          </div>
+        <h2 class="title is-5">Physics Validation</h2>
+        <div>
+          <video id="tasks3" autoplay muted loop playsinline height="1280" width="720">
+            <source src="./static/videos/physics.mp4" type="video/mp4"> <!-- Update with your third video source -->
+          </video>
         </div>
       </div>
     </div>
@@ -245,37 +170,49 @@ Q: What is the reward function, success condition to perform task Pick up Apple?
 
 <section class="section">
   <div class="columns is-centered has-text-left">
-      <h2 class="title is-4" style="text-align: center;">Generated Subtasks and Rewards</h2>
+    <div class="column is-four-fifths">
+      <h2 class="title is-4" style="text-align: center;">Generated Tasks and Rewards</h2>
       <div class="card mb-4 mt-4 text-dark bg-light">
-        <h5 class="card-header">Task: Put the Green Pepper in the Storage Furniture </h5>
+        <h5 class="card-header">Tasks/Skills Demo:</h5>
         <div class="card-body">
-            <p align="left">Choose a command:</p>
+            <p align="left">Choose a task:</p>
             <select class="form-select" size="5" aria-label="size 5 select example">
-                <option value="pepper_1">
-                    1) Open Cabinet Door
+                <option value="faucet">
+                    1) Turn Faucet
                 </option>
-                <option value="pepper_2">
-                    2) Pick Green Pepper 
+                <option value="sanitiser">
+                    2) Press the sanitiser
                 </option>
-                <!-- <option value="pepper_3">
-                    3) Place the Green Pepper in the Cabinet
+                <option value="push_container">
+                    3) Push the container
                 </option>
-                <option value="pepper_4">
-                    4) Close Cabinet Door
-                </option>  -->
+                <option value="switch">
+                    4) Turn on the switch
+                </option>
+                <option value="veggie_refridgerator">
+                    5) Put the veggie in the refridgerator
+                </option>
+                <option value="tennis_ball_furniture">
+                    6) Put the tennis ball in the cabinet
+                </option>
+                <option value="pen_in_drawer">
+                    7) Put the pen in the drawer
+                </option>
             </select>
-            <div class="col-md-12 mb-2">
-                <video id="vid_pepper" width="100%" preload="metadata" playsinline controls>
-                    <source src="./static/videos/turn_faucet.mp4" type="video/mp4">
-                </video>
-            </div>
 
-            <div class="row" id="content_pepper_1">
-                <div class="col-md-12" id="code_pepper_1">
+            <div class="row" id="content_faucet">
+                <div class="col-md-12 mb-2">
+                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
+                      <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="col-md-12" id="code_faucet_prompt">
+                </div>
+                <div class="col-md-12" id="code_faucet_response">
                 </div>
             </div>
 
-            <div class="row" id="content_pepper_2" style="display:none">
+            <div class="row" id="content_sanitiser" style="display:none">
                 <div class="col-md-12" id="code_pepper_2">
                 </div>
             </div>
@@ -302,16 +239,40 @@ Q: What is the reward function, success condition to perform task Pick up Apple?
                 </p>
             </div> -->
         </div>
+      </div>
     </div>
   </div>
 </section>
-<div class="container is-fullhd">
-  <hr class="solid">
-</div>
 
-<!--section class="section">
-  <div class="container is-max-desktop">
-      <h3 class="title is-5">Real-world Experiments: We validate our trained policies in real-world setting:</h3>
+<section class="section">
+  <div class="columns is-centered has-text-centered is-max-desktop">
+    <div class="column is-four-fifths">
+      <h2 class="title is-4">Scaling Policies to multiple assets</h2>
+      <div class="content has-text-centered">
+        <div class="videos-container">
+          <div class="video-wrapper">
+            <video id="tasks1" autoplay muted loop playsinline height="720" width="720">
+              <source src="./static/videos/articulated_policy.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video id="tasks2" autoplay muted loop playsinline height="720" width="720">
+              <source src="./static/videos/pick_place_policy.mp4" type="video/mp4"> <!-- Update with your second video source -->
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--div class="container is-fullhd">
+  <hr class="solid">
+</div-->
+
+<section class="section">
+  <div class="container is-centered has-text-centered is-max-desktop">
+      <h2 class="title is-4">Validation in Real-World</h2>
       <div class="content has-text-justified">
         <p>
           Task: Pick and Place Apple
@@ -319,7 +280,7 @@ Q: What is the reward function, success condition to perform task Pick up Apple?
       </div>
       <div class="content has-text-centered">
         <video id="pick_place" autoplay muted loop playsinline height="640" width="640">
-          <source src="./static/videos/pick_place.mp4"
+          <source src="./static/videos/real_world/pick_place.mp4"
                   type="video/mp4">
         </video>
       </div>
@@ -330,7 +291,7 @@ Q: What is the reward function, success condition to perform task Pick up Apple?
       </div>
       <div class="content has-text-centered">
         <video id="push" autoplay muted loop playsinline height="640" width="640">
-          <source src="./static/videos/push.mp4"
+          <source src="./static/videos/real_world/push.mp4"
                   type="video/mp4">
         </video>
       </div>
@@ -341,14 +302,14 @@ Q: What is the reward function, success condition to perform task Pick up Apple?
       </div>
       <div class="content has-text-centered">
         <video id="put_straberry" autoplay muted loop playsinline height="640" width="640">
-          <source src="./static/videos/put_strawberry_in_bucket.mp4"
+          <source src="./static/videos/real_world/put_strawberry_in_bucket.mp4"
                   type="video/mp4">
         </video>
       </div>
       </div>
     </div>
   </div>
-  </section-->
+  </section>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script>hljs.highlightAll();</script>
 
