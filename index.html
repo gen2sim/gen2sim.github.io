@@ -169,76 +169,74 @@
 </section>
 
 <section class="section">
-  <div class="columns is-centered has-text-left">
-    <div class="row justify-content-md-center mt-4">
-      <h2 class="title is-4" style="text-align: center;">Generated Tasks and Rewards</h2>
-      <div class="card mb-4 mt-4 text-dark bg-light">
-        <h5 class="card-header">Tasks/Skills Demo:</h5>
-        <div class="card-body">
-            <p align="left">Choose a task:</p>
-            <select class="form-select" size="5" aria-label="size 5 select example">
-                <option value="faucet">
-                    1) Turn Faucet
-                </option>
-                <option value="sanitiser">
-                    2) Press the sanitiser
-                </option>
-                <option value="push_container">
-                    3) Push the container
-                </option>
-                <option value="switch">
-                    4) Turn on the switch
-                </option>
-                <option value="veggie_refridgerator">
-                    5) Put the veggie in the refridgerator
-                </option>
-                <option value="tennis_ball_furniture">
-                    6) Put the tennis ball in the cabinet
-                </option>
-                <option value="pen_in_drawer">
-                    7) Put the pen in the drawer
-                </option>
-            </select>
+  <div class="row justify-content-md-center mt-4">
+    <h2 class="title is-4" style="text-align: center;">Generated Tasks and Rewards</h2>
+    <div class="card mb-4 mt-4 text-dark bg-light">
+      <h5 class="card-header">Tasks/Skills Demo:</h5>
+      <div class="card-body">
+          <p align="left">Choose a task:</p>
+          <select class="form-select" size="5" aria-label="size 5 select example">
+              <option value="faucet">
+                  1) Turn Faucet
+              </option>
+              <option value="sanitiser">
+                  2) Press the sanitiser
+              </option>
+              <option value="push_container">
+                  3) Push the container
+              </option>
+              <option value="switch">
+                  4) Turn on the switch
+              </option>
+              <option value="veggie_refridgerator">
+                  5) Put the veggie in the refridgerator
+              </option>
+              <option value="tennis_ball_furniture">
+                  6) Put the tennis ball in the cabinet
+              </option>
+              <option value="pen_in_drawer">
+                  7) Put the pen in the drawer
+              </option>
+          </select>
 
 
-            <!-- <div class="col-sm-6 mb-2 align-self-center">
+          <!-- <div class="col-sm-6 mb-2 align-self-center">
+            <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
+                <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+            </video>
+          </div> -->
+
+          <div class="row">
+            <div class="col-sm-6 mb-2 align-self-center">
               <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
                   <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
               </video>
-            </div> -->
+            </div>
+          </div>
 
-            <div class="row">
-              <div class="col-sm-6 mb-2 align-self-center">
-                <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
+          <div class="row" id="content_faucet">
+            <div class="col-md-12" id="code_faucet">
+            </div>
+          </div>
+
+        
+          <!-- <div class="row" id="content_faucet">
+              <div class="col-md-12 mb-2">
+                <video id="vid_faucet" preload="metadata" playsinline controls height="480" width="480">
                     <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
                 </video>
               </div>
-            </div>
-
-            <div class="row" id="content_faucet">
-              <div class="col-md-12" id="code_faucet">
+              <div class="col-md-12" id="code_faucet_prompt">
               </div>
-            </div>
+              <div class="col-md-12" id="code_faucet_response">
+              </div>
+          </div>
 
-          
-            <!-- <div class="row" id="content_faucet">
-                <div class="col-md-12 mb-2">
-                  <video id="vid_faucet" preload="metadata" playsinline controls height="480" width="480">
-                      <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="col-md-12" id="code_faucet_prompt">
-                </div>
-                <div class="col-md-12" id="code_faucet_response">
-                </div>
-            </div>
+          <div class="row" id="content_sanitiser" style="display:none">
+              <div class="col-md-12" id="code_pepper_2">
+              </div>
+          </div> -->
 
-            <div class="row" id="content_sanitiser" style="display:none">
-                <div class="col-md-12" id="code_pepper_2">
-                </div>
-            </div> -->
-
-        </div>
       </div>
     </div>
   </div>
