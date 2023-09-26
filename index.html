@@ -44,7 +44,7 @@
 <body>
 
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<!--nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -63,7 +63,7 @@
     </div>
 
   </div>
-</nav>
+</nav-->
 
 
 <section class="hero">
@@ -71,21 +71,76 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Scaling Up Simulation Environments for Robotic Skill Learning with Foundational Generative Models </h1>
+          <h1 class="title is-3 publication-title"> Gen2Sim: Scaling up Simulation with Generative Models for Robotic Skill Learning </h1>
           <!--h3 class="title is-5 conference-authors">CoRL 2023 Submission</h3-->
-
-
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="">Pushkal Katara</a>,</span>
+            <span class="author-block">
+              <a href="">Zhou Xian</a>,</span>
+            <span class="author-block">
+              <a href="">Katerina Fragkiadaki</a>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Carnegie Mellon University</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv [Coming Soon!]</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video [Coming Soon!]</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code [Coming Soon!]</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!--span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span-->
+            </div>
         </div>
+            <!-- Teaser Video. -->
+        <video id="v0" width="640" height="360" preload="metadata" playsinline="" muted="" loop="" autoplay="">
+            <source src="./static/videos/teaser_compressed_final.mp4" type="video/mp4">
+        </video>
+      </div>
       </div>
     </div>
   </div>
 </section>
 
-
-<div class="container is-fullhd">
+<!-- div class="container is-fullhd">
   <hr class="solid">
-</div>
-
+</div-->
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -95,18 +150,22 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We propose Gen2Sim a method for scaling up development of simulation environments task definitions and reward functions with 
-            minimal human involvement by capitalizing over large scale pre-trained generative models of language and images, 
-            one step towards fully autonomous robotic manipulation skill acquisition in simulation. 
-            We generate high fidelity 3D models from a single real or generated image of an object by differentiable 
-            3D model fitting that maximizes likelihood of a pre-trained view and pose conditioned image diffusion model. 
-            Our method  queries Large Language Models (LLMs) for plausible ranges of physical parameters for the generated assets, 
-            enabling reasonable simulated behavior. Our method then chain-of-thought prompts LLMs to parse URDF files of 
-            generated or human-developed assets, and create language task descriptions and corresponding reward functions 
-            based on the assets' affordances. We demonstrate our method effectively generates meaningful tasks and 
-            credible reward functions that can be utilized by readily available RL methods for downstream skill learning. 
-            Our work contributes thousands of simulated environments and task variations for articulated and novel 3D object assets, 
-            establishing a fully automated pipeline that supports continual simulation development for robotics. 
+            We propose Generation to Simulation: Gen2Sim, a method for scaling up robot skill learning in simulation by automatically generating 
+            simulation 3D assets, scenes, task definitions, task decompositions and reward functions, capitalizing over large pre-trained 
+            generative models of language and images. 
+          </p>
+          <p>
+            We propose methods for 3D simulation asset generation from lifting open-world 2D object images 
+            using image diffusion models and LLM queries for plausible ranges of physical parameters. We then chain-of-thought prompt LLMs to parse 
+            URDF files of generated and human-developed assets to generate task descriptions, task decompositions, and corresponding reward functions, 
+            based on the assets and scene affordances. We train reinforcement learning policies in the simulation environments using our generated tasks 
+            supervised by the generated reward functions. 
+          </p>
+          <p>
+            We demonstrate successful policy learning for a number of long horizon tasks using Gen2Sim, 
+            without any human involvement. We show construction of simulated twin environment based on real world observations, and successful transfer 
+            of the trained robot trajectories from simulation to the real world. Our work contributes hundreds of simulated assets and tasks for articulated 
+            and novel 3D object assets, taking a step towards fully autonomous robotic manipulation skill acquisition in simulation. 
           </p>
         </div>
       </div>
@@ -138,42 +197,52 @@
 </style>
 
 
-
 <section class="section">
-  <div class="columns is-centered has-text-centered">
+  <div class="columns is-centered">
     <div class="column is-four-fifths">
-      <h1 class="title is-3">Results</h1>
-      <h2 class="title is-5">Generated 3D Assets</h2>
-      <div class="content has-text-centered">
-        <div class="videos-container">
-          <div class="video-wrapper">
-            <video id="tasks1" autoplay muted loop playsinline>
-              <source src="./static/videos/3d_assets.mp4" type="video/mp4">
-            </video>
+      <h2 class="title is-4 has-text-centered">3D Asset Generation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-6">Geometry and Appearance</h2>
+            <img src="./static/images/image_to_3d.png" width=640 height=480 alt="app_geo">
           </div>
-          <div class="video-wrapper">
-            <video id="tasks2" autoplay muted loop playsinline>
-              <source src="./static/videos/3d_assets_2.mp4" type="video/mp4"> <!-- Update with your second video source -->
-            </video>
-          </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-6">Physics Parameters</h2>
+          <img src="./static/images/physics.png" width=640 height=480 alt="app_geo">
         </div>
-        <h2 class="title is-5">Physics Validation</h2>
-        <div>
-          <video id="tasks3" autoplay muted loop playsinline height="1280" width="720">
-            <source src="./static/videos/physics.mp4" type="video/mp4"> <!-- Update with your third video source -->
+      </div>
+      </div>
+    <div class="content has-text-centered">
+      <h2 class="title is-6">Results</h2>
+      <div class="videos-container">
+        <div class="video-wrapper">
+          <video id="3d_assets" autoplay muted loop playsinline>
+            <source src="./static/videos/3d_assets_new.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-wrapper">
+          <video id="physics" autoplay muted loop playsinline width="415px">
+            <source src="./static/videos/physics.mp4" type="video/mp4">
           </video>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="columns is-centered has-text-left">
+  <div class="columns is-centered">
     <div class="column is-four-fifths">
-      <h2 class="title is-4" style="text-align: center;">Generated Tasks and Rewards</h2>
+      <h2 class="title is-4" style="text-align: center;"> Task and Reward Generation </h2>
+      <div class="is-centered has-text-centered">
+        <img src="./static/images/task_reward_gen.png" width="800px" alt="task_reward_gen">
+      </div>
       <div class="card mb-4 mt-4 text-dark bg-light">
-        <h5 class="card-header">Tasks/Skills Demo:</h5>
+        <h5 class="card-header"></h5>
         <div class="card-body">
             <p align="left">Choose a task:</p>
             <select class="form-select" size="5" aria-label="size 5 select example">
@@ -247,17 +316,12 @@
 <section class="section">
   <div class="columns is-centered has-text-centered is-max-desktop">
     <div class="column is-four-fifths">
-      <h2 class="title is-4">Scaling Policies to multiple assets</h2>
+      <h2 class="title is-4">Scaling up Simulation Environments, Tasks and Demonstrations</h2>
       <div class="content has-text-centered">
         <div class="videos-container">
           <div class="video-wrapper">
             <video id="tasks1" autoplay muted loop playsinline height="720" width="720">
               <source src="./static/videos/articulated_policy.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="video-wrapper">
-            <video id="tasks2" autoplay muted loop playsinline height="720" width="720">
-              <source src="./static/videos/pick_place_policy.mp4" type="video/mp4"> <!-- Update with your second video source -->
             </video>
           </div>
         </div>
