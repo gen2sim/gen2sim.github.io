@@ -200,3 +200,13 @@ pre.codegen {
   height: 300px;
   overflow-y: scroll;
 }
+
+.four-fifths-card {
+  width: 80%;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
