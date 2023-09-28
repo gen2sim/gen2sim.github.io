@@ -74,10 +74,10 @@ def compute_reward(env):
 ```
 
 Q: The environment contains the following assets:
-1.  asset_name: "faucet"
+1.  asset_name: "switch"
     part_cofiguration:
         Part 1: "body"
-        Part 2: "switch"
+        Part 2: "lever"
             - link_name: "link_0"
             - joint_name: "joint_0"
             - joint_type: "revolute"

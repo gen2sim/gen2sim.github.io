@@ -1,13 +1,51 @@
-# Task: PickGreenPepper
+A: The following tasks can be performed in this environment:
 
-def compute_reward(self):
+Task 1: Turn on the Faucet
+Task Description: Rotate the faucet switch to turn on the faucet.
+
+Reward Function:
+```
+def compute_reward(env):
     # reward function
-    asset_pose = self.env.get_position_by_asset_link_name("green_pepper", "green_pepper")
-    gripper_pose = self.env.get_robot_gripper_position()
-    distance_gripper_to_asset = torch.norm(gripper_pose - asset_pose, dim=-1)
-    door_state = self.env.get_state_by_asset_joint_name("cabinet", "joint_1")
-    cost = distance_gripper_to_asset - door_state
-    reward = - cost
-    # success condition
-    success = torch.logical_and(distance_gripper_to_asset < 0.1)
+    faucet_switch_pose = env.get_pose_by_link_name("faucet", "link_0")
+    gripper_pose = env.get_robot_gripper_pose()
+    distance_gripper_to_switch = torch.norm(faucet_switch_pose - gripper_pose, dim=-1)
+    switch_state = env.get_state_by_joint_name("faucet", "joint_0")
+    
+    # Calculate the cost as the distance between gripper and switch minus the switch state
+    cost = distance_gripper_to_switch - switch_state
+    
+    # Define a reward based on the cost
+    reward = -cost
+    
+    # Success condition: Faucet is turned on
+    target_switch_state = env.get_limits_by_joint_name("faucet", "joint_0")["upper"]
+    success = switch_state >= target_switch_state
+    
     return reward, success
+```
+
+Task 2: Turn off the Faucet
+Task Description: Rotate the faucet switch to turn off the faucet.
+
+Reward Function:
+```
+def compute_reward(env):
+    # reward function
+    faucet_switch_pose = env.get_pose_by_link_name("faucet", "link_0")
+    gripper_pose = env.get_robot_gripper_pose()
+    distance_gripper_to_switch = torch.norm(faucet_switch_pose - gripper_pose, dim=-1)
+    switch_state = env.get_state_by_joint_name("faucet", "joint_0")
+    
+    # Calculate the cost as the distance between gripper and switch minus the switch state
+    cost = distance_gripper_to_switch - switch_state
+    
+    # Define a reward based on the cost
+    reward = -cost
+    
+    # Success condition: Faucet is turned on
+    target_switch_state = env.get_limits_by_joint_name("faucet", "joint_0")["lower"]
+    success = switch_state <= target_switch_state
+    
+    return reward, success
+```

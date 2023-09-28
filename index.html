@@ -240,6 +240,8 @@
       <div class="is-centered has-text-centered">
         <img src="./static/images/task_reward_gen.png" width="800px" alt="task_reward_gen">
       </div>
+      <h2 class="title is-6">Results</h2>
+      <h2 class="title is-7">Assets with Varying Affordances</h2>
       <div class="card mb-4 mt-4 text-dark bg-light">
         <h5 class="card-header"></h5>
         <div class="card-body">
@@ -248,18 +250,54 @@
                 <option value="faucet">
                     1) Turn the faucet
                 </option>
+                <option value="sanitiser">
+                    2) Press the tip of the sanitiser
+                </option>
+                <option value="switch">
+                    3) Turn on the switch
+                </option>
+                <option value="toaster">
+                    3) Press the lever of the toaster
+                </option>
             </select>
-
-            <div class="row">
+  
+            <div class="row" id="content_faucet">
+              <div class="col-md-12" id="code_faucet">
+              </div>
               <div class="col-sm-6 mb-2 align-self-center">
                 <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
                     <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
-  
-            <div class="row" id="content_faucet">
-              <div class="col-md-12" id="code_faucet">
+
+            <div class="row" id="content_sanitiser" style="display:none">
+              <div class="col-md-12" id="code_sanitiser">
+              </div>
+              <div class="col-sm-6 mb-2 align-self-center">
+                <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
+                    <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="row" id="content_switch" style="display:none">
+              <div class="col-md-12" id="code_switch">
+              </div>
+              <div class="col-sm-6 mb-2 align-self-center">
+                <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
+                    <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="row" id="content_toaster" style="display:none">
+              <div class="col-md-12" id="code_toaster">
+              </div>
+              <div class="col-sm-6 mb-2 align-self-center">
+                <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
+                    <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+                </video>
               </div>
             </div>
 
