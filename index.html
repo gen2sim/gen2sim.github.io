@@ -242,30 +242,30 @@
       </div>
       <h2 class="title is-5" style="text-align: center;">Results</h2>
       <div class="center-container">
-        <div class="card mb-4 mt-4 text-dark bg-light four-fifths-card">
+        <div class="card mb-4 mt-4 text-dark bg-dark four-fifths-card">
           <h5 class="card-header">Assets with Varying Affordances</h5>
           <div class="card-body">
-              <p align="left">Choose a task:</p>
+              <p align="left">Choose an Asset:</p>
               <select class="form-select" size="5" aria-label="size 5 select example">
                   <option value="faucet">
-                      1) Turn the faucet
+                      1) Faucet
                   </option>
                   <option value="sanitiser">
-                      2) Press the tip of the sanitiser
+                      2) Sanitiser
                   </option>
                   <option value="switch">
-                      3) Turn on the switch
+                      3) Switch
                   </option>
                   <option value="toaster">
-                      4) Press the lever of the toaster
+                      4) Toaster
                   </option>
               </select>
     
               <div class="row" id="content_faucet">
                 <div class="col-md-12" id="code_faucet">
                 </div>
-                <div class="col-sm-6 mb-2 justify-content-center align-items-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
+                <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
+                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto">
                       <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -274,8 +274,8 @@
               <div class="row" id="content_sanitiser" style="display:none">
                 <div class="col-md-12" id="code_sanitiser">
                 </div>
-                <div class="col-sm-6 mb-2 justify-content-center align-items-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
+                <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
+                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto">
                       <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -284,8 +284,8 @@
               <div class="row" id="content_switch" style="display:none">
                 <div class="col-md-12" id="code_switch">
                 </div>
-                <div class="col-sm-6 mb-2 justify-content-center align-items-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
+                <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
+                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto">
                       <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -294,34 +294,12 @@
               <div class="row" id="content_toaster" style="display:none">
                 <div class="col-md-12" id="code_toaster">
                 </div>
-                <div class="col-sm-6 mb-2 justify-content-center align-items-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
+                <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
+                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto">
                       <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
-
-              <!-- <div class="row" id="content_pepper_3" style="display:none">
-                  <div class="col-md-12" id="code_blocks_3">
-                  </div>
-              </div>
-
-              <div class="row" id="content_pepper_4" style="display:none">
-                  <div class="col-md-12" id="code_blocks_4">
-                  </div>
-              </div> -->
-  <!-- 
-              <div class="row">
-                  <p>
-                      Prompts (same for all tabletop manipulation tasks):
-                      <br>
-                      <a href="https://code-as-policies.github.io/prompts/tabletop_ui.txt">High-Level UI</a> |
-                      <a href="https://code-as-policies.github.io/prompts/parse_obj_name.txt">Parse Object Names</a> |
-                      <a href="https://code-as-policies.github.io/prompts/parse_position.txt">Parse Positions</a> |
-                      <a href="https://code-as-policies.github.io/prompts/parse_question.txt">Parse Questions</a> |
-                      <a href="https://code-as-policies.github.io/prompts/fgen.txt">Function Generation</a>
-                  </p>
-              </div> -->
           </div>
         </div>
       </div>
@@ -329,19 +307,19 @@
         <div class="card mb-4 mt-4 text-dark bg-light four-fifths-card">
           <h5 class="card-header">Assets with Varying Part Structures</h5>
           <div class="card-body">
-              <p align="left">Choose a task:</p>
+              <p align="left">Choose an asset with target part:</p>
               <select class="form-select" size="5" aria-label="size 5 select example">
                   <option value="bottom_right_door_cabinet">
-                      1) Open the bottom right door of the cabinet
+                      1) Asset: Cabinet; Part: Bottom Right Door
                   </option>
                   <option value="top_right_drawer_table">
-                      2) Close the top right drawer of the table
+                      2) Asset: Table; Part: Top Right Drawer
                   </option>
                   <option value="left_door_cabinet">
-                      3) Open the left door of the cabinet
+                      3) Asset: Cabinet; Part: Left Door
                   </option>
                   <option value="top_drawer_table">
-                      4) Close the top drawer of the table
+                      4) Asset: Table; Part: Top Drawer
                   </option>
               </select>
     
@@ -380,6 +358,42 @@
                 </div>
                 <div class="col-sm-6 mb-2 align-self-center">
                   <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
+                      <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="center-container">
+        <div class="card mb-4 mt-4 text-dark bg-dark four-fifths-card">
+          <h5 class="card-header">Complex Environments with Long-Horizon Tasks and Task Decomposition</h5>
+          <div class="card-body">
+              <p align="left">Choose a task:</p>
+              <select class="form-select" size="5" aria-label="size 5 select example">
+                  <option value="green_pepper">
+                      1) Put the green pepper in left door of the refrigerator
+                  </option>
+                  <option value="tennis_ball">
+                      2) Put the tennis ball in left door of the cabinet
+                  </option>
+              </select>
+    
+              <div class="row" id="content_green_pepper">
+                <div class="col-md-12" id="code_tennis_ball">
+                </div>
+                <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
+                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto">
+                      <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+              <div class="row" id="content_tennis_ball" style="display:none">
+                <div class="col-md-12" id="code_tennis_ball">
+                </div>
+                <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
+                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto">
                       <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
                   </video>
                 </div>

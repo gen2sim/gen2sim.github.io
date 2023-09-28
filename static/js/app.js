@@ -1,6 +1,6 @@
 $(document).ready(function() {
         var codegen_html_template = `
-    <p>{name}</p>
+    <b><p>{name}</p><b>
     <pre class="codegen"><code class="language-python">{code}</code></pre>`;
     $('[id^="code_"]').each(function() {
         var id = this.id;
@@ -10,7 +10,7 @@ $(document).ready(function() {
         $.get(codegen_file, function(data) {
             var highlighted_code = hljs.highlight(data, {language: 'python'}).value;
             var html_code = codegen_html_template
-                                .replace('{name}', 'Prompt')
+                                .replace('{name}', 'Prompt:')
                                 .replace('{code}', highlighted_code)
                                 .replace('{link}', codegen_file);
             $(html_code).appendTo("#" + id);
@@ -20,7 +20,7 @@ $(document).ready(function() {
         $.get(codegen_file, function(data) {
             var highlighted_code = hljs.highlight(data, {language: 'python'}).value;
             var html_code = codegen_html_template
-                                .replace('{name}', 'GPT-4 Output')
+                                .replace('{name}', 'GPT-4 Output:')
                                 .replace('{code}', highlighted_code)
                                 .replace('{link}', codegen_file);
             $(html_code).appendTo("#" + id);
