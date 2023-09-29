@@ -195,7 +195,7 @@
     }
 </style>
 
-
+<!-- 3D Asset Generation -->
 <section class="section">
   <div class="columns is-centered">
     <div class="column is-four-fifths">
@@ -215,7 +215,6 @@
       </div>
       </div>
     <div class="content has-text-centered">
-      <h2 class="title is-6">Results</h2>
       <div class="videos-container">
         <div class="video-wrapper">
           <video id="3d_assets" autoplay muted loop playsinline>
@@ -233,6 +232,7 @@
   </div>
 </section>
 
+<!-- LLM -->
 <section class="section">
   <div class="columns is-centered">
     <div class="column is-four-fifths">
@@ -240,7 +240,7 @@
       <div class="is-centered has-text-centered">
         <img src="./static/images/task_reward_gen.png" width="800px" alt="task_reward_gen">
       </div>
-      <h2 class="title is-5" style="text-align: center;">Results</h2>
+      <!--div> assets with varying affordances <-->
       <div class="center-container">
         <div class="card mb-4 mt-4 text-dark bg-light four-fifths-card">
           <h5 class="card-header">Assets with Varying Affordances</h5>
@@ -259,13 +259,16 @@
                   <option value="toaster">
                       4) Toaster
                   </option>
+                  <option value="yellow_pepper">
+                      5) Yellow Pepper
+                  </option>
               </select>
-    
+
               <div class="row" id="content_faucet">
                 <div class="col-md-12" id="code_faucet">
                 </div>
                 <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto">
+                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
                       <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -275,8 +278,8 @@
                 <div class="col-md-12" id="code_sanitiser">
                 </div>
                 <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto">
-                      <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+                  <video id="vid_sanitiser" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
+                      <source src="./static/tasks/sanitiser/press_sanitiser.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
@@ -285,8 +288,8 @@
                 <div class="col-md-12" id="code_switch">
                 </div>
                 <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto">
-                      <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+                  <video id="vid_switch" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
+                      <source src="./static/tasks/switch/turn_on_switch.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
@@ -295,14 +298,25 @@
                 <div class="col-md-12" id="code_toaster">
                 </div>
                 <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto">
-                      <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
+                      <source src="./static/tasks/toaster/toaster.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+              <div class="row" id="content_yellow_pepper" style="display:none">
+                <div class="col-md-12" id="code_yellow_pepper">
+                </div>
+                <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
+                  <video id="vid_yellow_pepper" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
+                      <source src="./static/tasks/yellow_pepper/yellow_pepper.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
           </div>
         </div>
       </div>
+      <!--div> assets with varying part structures <-->
       <div class="center-container">
         <div class="card mb-4 mt-4 text-dark bg-light four-fifths-card">
           <h5 class="card-header">Assets with Varying Part Structures</h5>
@@ -318,17 +332,17 @@
                   <option value="left_door_cabinet">
                       3) Asset: Cabinet; Part: Left Door
                   </option>
-                  <option value="top_drawer_table">
-                      4) Asset: Table; Part: Top Drawer
+                  <option value="dishwasher">
+                      4) Asset: Dishwasher; Part: Door
                   </option>
               </select>
     
               <div class="row" id="content_bottom_right_door_cabinet">
-                <div class="col-md-12" id="code_top_right_drawer_table">
+                <div class="col-md-12" id="code_bottom_right_door_cabinet">
                 </div>
                 <div class="col-sm-6 mb-2 align-self-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
-                      <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+                  <video id="vid_bottom_right_door_cabinet" width="100%" preload="metadata" playsinline controls autoplay muted>
+                      <source src="./static/tasks/bottom_right_door_cabinet/bottom_right_door_cabinet.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
@@ -337,8 +351,8 @@
                 <div class="col-md-12" id="code_top_right_drawer_table">
                 </div>
                 <div class="col-sm-6 mb-2 align-self-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
-                      <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls autoplay muted>
+                      <source src="./static/tasks/top_right_drawer_table/top_drawer_table.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
@@ -347,44 +361,45 @@
                 <div class="col-md-12" id="code_left_door_cabinet">
                 </div>
                 <div class="col-sm-6 mb-2 align-self-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
-                      <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls autoplay muted>
+                      <source src="./static/tasks/left_door_cabinet/left_door_cabinet.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
 
-              <div class="row" id="content_top_drawer_table" style="display:none">
-                <div class="col-md-12" id="code_top_drawer_table">
+              <div class="row" id="content_dishwasher" style="display:none">
+                <div class="col-md-12" id="code_dishwasher">
                 </div>
                 <div class="col-sm-6 mb-2 align-self-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls>
-                      <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+                  <video id="vid_dishwasher" width="100%" preload="metadata" playsinline controls autoplay muted>
+                      <source src="./static/tasks/dishwasher_door/open_dishwasher.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
           </div>
         </div>
       </div>
+      <!--div> environments, task decomposition <-->
       <div class="center-container">
         <div class="card mb-4 mt-4 text-dark bg-light four-fifths-card">
           <h5 class="card-header">Complex Environments with Long-Horizon Tasks and Task Decomposition</h5>
           <div class="card-body">
-              <p align="left">Choose a task:</p>
+              <p align="left">We import generated and human-made assets in simulation environment. Choose an environment:</p>
               <select class="form-select" size="5" aria-label="size 5 select example">
                   <option value="green_pepper">
-                      1) Put the green pepper in left door of the refrigerator
+                      1) Asset: Green Pepper, Refrigerator
                   </option>
                   <option value="tennis_ball">
-                      2) Put the tennis ball in left door of the cabinet
+                      2) Asset: Tennis Ball, Cabinet
                   </option>
               </select>
     
-              <div class="row" id="content_green_pepper">
-                <div class="col-md-12" id="code_tennis_ball">
+              <div class="row" id="content_green_pepper" >
+                <div class="col-md-12" id="code_green_pepper">
                 </div>
                 <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto">
-                      <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+                  <video id="vid_green_pepper" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
+                      <source src="./static/tasks/green_pepper/veggie_refridgerator.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
@@ -393,8 +408,8 @@
                 <div class="col-md-12" id="code_tennis_ball">
                 </div>
                 <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto">
-                      <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+                  <video id="vid_tennis_ball" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
+                      <source src="./static/tasks/tennis_ball/put_tennis_ball_cabinet.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
@@ -405,6 +420,7 @@
   </div>
 </section>
 
+<!-- Scaling -->
 <section class="section">
   <div class="columns is-centered has-text-centered is-max-desktop">
     <div class="column is-four-fifths">
