@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gen2Sim</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet"> -->
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
@@ -71,7 +71,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-3 publication-title"> Gen2Sim: Scaling up Simulation with Generative Models for Robotic Skill Learning </h1>
+          <h1 class="title is-2 publication-title"> Gen2Sim: Scaling up Simulation with Generative Models for Robotic Skill Learning </h1>
           <!--h3 class="title is-5 conference-authors">CoRL 2023 Submission</h3-->
 <!--           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -85,43 +85,53 @@
 <!--           <div class="is-size-5 publication-authors">
             <span class="author-block">Carnegie Mellon University</span>
           </div> -->
-<!--           <div class="column has-text-centered">
-            <div class="publication-links">
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv [Coming Soon!]</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video [Coming Soon!]</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code [Coming Soon!]</span>
+          <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2011.12948"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
                   </a>
-              </span>
-            </div>
-        </div> -->
-            <!-- Teaser Video. -->
-        <video id="v0" width="720" height="400" preload="metadata" playsinline="" muted="" loop="" autoplay="">
-            <source src="./static/videos/teaser_compressed_final.mp4" type="video/mp4">
-        </video>
+                </span>
+                <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/google/nerfies"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Github</span>
+                    </a>
+                </span>
+              </div>
+          </div>
       </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <video id="teaser" autoplay="" muted="" loop="" height="100%">
+        <source src="./static/videos/teaser_compressed_final.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+      <br>
+        <b>Gen2Sim</b> leverages foundational generative models of image and language to scale up simulation environments, tasks and demonstrations.
+      </h2>
     </div>
   </div>
 </section>
@@ -138,7 +148,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We propose Generation to Simulation: Gen2Sim, a method for scaling up robot skill learning in simulation by automatically generating 
+            We propose Generation to Simulation: <b>Gen2Sim</b>, a method for scaling up robot skill learning in simulation by automatically generating 
             simulation 3D assets, scenes, task definitions, task decompositions and reward functions, capitalizing over large pre-trained 
             generative models of language and images. 
           </p>
@@ -183,247 +193,226 @@
     }
 </style>
 
-<!-- 3D Asset Generation -->
 <section class="section">
-  <div class="columns is-centered">
-    <div class="column is-four-fifths">
-      <h2 class="title is-4 has-text-centered">3D Asset Generation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column">
-          <div class="content">
-            <h2 class="title is-6">Geometry and Appearance</h2>
-            <img src="./static/images/image_to_3d.png" width=640 height=480 alt="app_geo">
-          </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-6">Physics Parameters</h2>
-          <img src="./static/images/physics.png" width=640 height=480 alt="app_geo">
+  <div class="container is-max-widescreen">
+    <div class="rows">
+      <div class="row is-full-width half-width">
+        <div class="columns is-centered">
+          <h3 class="title is-4">Gen2Sim Overview</h3>
         </div>
-      </div>
-      </div>
-    <div class="content has-text-centered">
-      <div class="videos-container">
-        <div class="video-wrapper">
-          <video id="3d_assets" autoplay muted loop playsinline>
+        <video id="overview" autoplay="" muted="" loop="">
+          <source src="./static/videos/overview_video.mp4" type="video/mp4">
+        </video>
+        <br>
+        <br>
+        <h5 class="title is-5">1. Asset Generation</h5>
+        <h6 class="title is-6">a. Geometry and Appearance with Image to 3D Lifting</h6>
+        <div class="columns is-centered">
+          <video id="3d_asset_pipeline" height="1000px" width="1000px" autoplay="" muted="" loop="">
+            <source src="./static/videos/3d_lifting.mp4" type="video/mp4">
+          </video>
+        </div>
+        <br>
+        <div class="columns is-centered">
+          We generate hundereds of 3D Assets from in-the-wild images.
+        </div>
+        <br>
+        <div class="columns is-centered">  
+          <video id="3d_assets" height="800px" width="800px" autoplay muted loop playsinline>
             <source src="./static/videos/3d_assets_new.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="video-wrapper">
+        <br>
+        <br>
+        <h6 class="title is-6">b. Physics Parameters with LLMs</h6>
+        <div class="column">
+          <img src="./static/images/physics.png" width=640 height=480 alt="app_geo">
           <video id="physics" autoplay muted loop playsinline width="415px">
             <source src="./static/videos/physics.mp4" type="video/mp4">
           </video>
         </div>
-      </div>
-    </div>
-    </div>
-  </div>
-</section>
+        <br>
+        <br>
+        <h3 class="title is-4">2. Task and Reward Generation using LLMs</h3>
+        <div class="is-centered has-text-centered">
+          <video id="llm" autoplay muted loop playsinline>
+            <source src="./static/videos/llm.mp4" type="video/mp4">
+          </video>
+        </div>
+        <!-- Task and Reward Generation Results-->
+        <div>
+          We show results for assets with varying affordances, part structures, and tasks with long-horizon trajectories.
+        </div>
+        <div class="center-container">
+          <div class="card mb-4 mt-4 text-dark bg-light four-fifths-card">
+            <h5 class="card-header">Manipulation Environments and Tasks</h5>
+            <div class="card-body">
+                <p align="left">Choose an Asset:</p>
+                <select class="form-select" size="5" aria-label="size 5 select example">
+                    <option value="faucet">
+                        1) Faucet
+                    </option>
+                    <option value="sanitiser">
+                        2) Sanitiser
+                    </option>
+                    <option value="switch">
+                        3) Switch
+                    </option>
+                    <option value="toaster">
+                        4) Toaster
+                    </option>
+                    <option value="yellow_pepper">
+                        5) Yellow Pepper
+                    </option>
+                    <option value="bottom_right_door_cabinet">
+                        6) Cabinet; Part: Bottom Right Door
+                    </option>
+                    <option value="top_right_drawer_table">
+                        7) Table; Part: Top Right Drawer
+                    </option>
+                    <option value="left_door_cabinet">
+                        8) Cabinet; Part: Left Door
+                    </option>
+                    <option value="dishwasher">
+                        9) Dishwasher; Part: Door
+                    </option>
+                    <option value="green_pepper">
+                        10) Green Pepper, Refrigerator
+                    </option>
+                    <option value="tennis_ball">
+                        11) Tennis Ball, Cabinet
+                    </option>
+                </select>
+  
+                <div class="row" id="content_faucet">
+                  <div class="col-md-12" id="code_faucet">
+                  </div>
+                  <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
+                    <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
+                        <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+  
+                <div class="row" id="content_sanitiser" style="display:none">
+                  <div class="col-md-12" id="code_sanitiser">
+                  </div>
+                  <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
+                    <video id="vid_sanitiser" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
+                        <source src="./static/tasks/sanitiser/press_sanitiser.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+  
+                <div class="row" id="content_switch" style="display:none">
+                  <div class="col-md-12" id="code_switch">
+                  </div>
+                  <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
+                    <video id="vid_switch" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
+                        <source src="./static/tasks/switch/turn_on_switch.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+  
+                <div class="row" id="content_toaster" style="display:none">
+                  <div class="col-md-12" id="code_toaster">
+                  </div>
+                  <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
+                    <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
+                        <source src="./static/tasks/toaster/toaster.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+  
+                <div class="row" id="content_yellow_pepper" style="display:none">
+                  <div class="col-md-12" id="code_yellow_pepper">
+                  </div>
+                  <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
+                    <video id="vid_yellow_pepper" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
+                        <source src="./static/tasks/yellow_pepper/yellow_pepper.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
 
-<!-- LLM -->
-<section class="section">
-  <div class="columns is-centered">
-    <div class="column is-four-fifths">
-      <h2 class="title is-4" style="text-align: center;"> Task and Reward Generation </h2>
-      <div class="is-centered has-text-centered">
-        <img src="./static/images/task_reward_gen.png" width="800px" alt="task_reward_gen">
-      </div>
-      <!--div> assets with varying affordances <-->
-      <div class="center-container">
-        <div class="card mb-4 mt-4 text-dark bg-light four-fifths-card">
-          <h5 class="card-header">Assets with Varying Affordances</h5>
-          <div class="card-body">
-              <p align="left">Choose an Asset:</p>
-              <select class="form-select" size="5" aria-label="size 5 select example">
-                  <option value="faucet">
-                      1) Faucet
-                  </option>
-                  <option value="sanitiser">
-                      2) Sanitiser
-                  </option>
-                  <option value="switch">
-                      3) Switch
-                  </option>
-                  <option value="toaster">
-                      4) Toaster
-                  </option>
-                  <option value="yellow_pepper">
-                      5) Yellow Pepper
-                  </option>
-              </select>
+                <div class="row" id="content_bottom_right_door_cabinet" style="display:none">
+                  <div class="col-md-12" id="code_bottom_right_door_cabinet">
+                  </div>
+                  <div class="col-sm-6 mb-2 align-self-center">
+                    <video id="vid_bottom_right_door_cabinet" width="100%" preload="metadata" playsinline controls autoplay muted>
+                        <source src="./static/tasks/bottom_right_door_cabinet/bottom_right_door_cabinet.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+  
+                <div class="row" id="content_top_right_drawer_table" style="display:none">
+                  <div class="col-md-12" id="code_top_right_drawer_table">
+                  </div>
+                  <div class="col-sm-6 mb-2 align-self-center">
+                    <video id="vid_faucet" width="100%" preload="metadata" playsinline controls autoplay muted>
+                        <source src="./static/tasks/top_right_drawer_table/top_drawer_table.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+  
+                <div class="row" id="content_left_door_cabinet" style="display:none">
+                  <div class="col-md-12" id="code_left_door_cabinet">
+                  </div>
+                  <div class="col-sm-6 mb-2 align-self-center">
+                    <video id="vid_faucet" width="100%" preload="metadata" playsinline controls autoplay muted>
+                        <source src="./static/tasks/left_door_cabinet/left_door_cabinet.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+  
+                <div class="row" id="content_dishwasher" style="display:none">
+                  <div class="col-md-12" id="code_dishwasher">
+                  </div>
+                  <div class="col-sm-6 mb-2 align-self-center">
+                    <video id="vid_dishwasher" width="100%" preload="metadata" playsinline controls autoplay muted>
+                        <source src="./static/tasks/dishwasher_door/open_dishwasher.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
 
-              <div class="row" id="content_faucet">
-                <div class="col-md-12" id="code_faucet">
+                <div class="row" id="content_green_pepper" style="display:none">
+                  <div class="col-md-12" id="code_green_pepper">
+                  </div>
+                  <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
+                    <video id="vid_green_pepper" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
+                        <source src="./static/tasks/green_pepper/veggie_refridgerator.mp4" type="video/mp4">
+                    </video>
+                  </div>
                 </div>
-                <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
-                      <source src="./static/tasks/faucet/turn_faucet.mp4" type="video/mp4">
-                  </video>
+  
+                <div class="row" id="content_tennis_ball" style="display:none">
+                  <div class="col-md-12" id="code_tennis_ball">
+                  </div>
+                  <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
+                    <video id="vid_tennis_ball" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
+                        <source src="./static/tasks/tennis_ball/put_tennis_ball_cabinet.mp4" type="video/mp4">
+                    </video>
+                  </div>
                 </div>
-              </div>
 
-              <div class="row" id="content_sanitiser" style="display:none">
-                <div class="col-md-12" id="code_sanitiser">
-                </div>
-                <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
-                  <video id="vid_sanitiser" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
-                      <source src="./static/tasks/sanitiser/press_sanitiser.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-
-              <div class="row" id="content_switch" style="display:none">
-                <div class="col-md-12" id="code_switch">
-                </div>
-                <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
-                  <video id="vid_switch" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
-                      <source src="./static/tasks/switch/turn_on_switch.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-
-              <div class="row" id="content_toaster" style="display:none">
-                <div class="col-md-12" id="code_toaster">
-                </div>
-                <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
-                      <source src="./static/tasks/toaster/toaster.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-
-              <div class="row" id="content_yellow_pepper" style="display:none">
-                <div class="col-md-12" id="code_yellow_pepper">
-                </div>
-                <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
-                  <video id="vid_yellow_pepper" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
-                      <source src="./static/tasks/yellow_pepper/yellow_pepper.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <!--div> assets with varying part structures <-->
-      <div class="center-container">
-        <div class="card mb-4 mt-4 text-dark bg-light four-fifths-card">
-          <h5 class="card-header">Assets with Varying Part Structures</h5>
-          <div class="card-body">
-              <p align="left">Choose an asset with target part:</p>
-              <select class="form-select" size="5" aria-label="size 5 select example">
-                  <option value="bottom_right_door_cabinet">
-                      1) Asset: Cabinet; Part: Bottom Right Door
-                  </option>
-                  <option value="top_right_drawer_table">
-                      2) Asset: Table; Part: Top Right Drawer
-                  </option>
-                  <option value="left_door_cabinet">
-                      3) Asset: Cabinet; Part: Left Door
-                  </option>
-                  <option value="dishwasher">
-                      4) Asset: Dishwasher; Part: Door
-                  </option>
-              </select>
-    
-              <div class="row" id="content_bottom_right_door_cabinet">
-                <div class="col-md-12" id="code_bottom_right_door_cabinet">
-                </div>
-                <div class="col-sm-6 mb-2 align-self-center">
-                  <video id="vid_bottom_right_door_cabinet" width="100%" preload="metadata" playsinline controls autoplay muted>
-                      <source src="./static/tasks/bottom_right_door_cabinet/bottom_right_door_cabinet.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-
-              <div class="row" id="content_top_right_drawer_table" style="display:none">
-                <div class="col-md-12" id="code_top_right_drawer_table">
-                </div>
-                <div class="col-sm-6 mb-2 align-self-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls autoplay muted>
-                      <source src="./static/tasks/top_right_drawer_table/top_drawer_table.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-
-              <div class="row" id="content_left_door_cabinet" style="display:none">
-                <div class="col-md-12" id="code_left_door_cabinet">
-                </div>
-                <div class="col-sm-6 mb-2 align-self-center">
-                  <video id="vid_faucet" width="100%" preload="metadata" playsinline controls autoplay muted>
-                      <source src="./static/tasks/left_door_cabinet/left_door_cabinet.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-
-              <div class="row" id="content_dishwasher" style="display:none">
-                <div class="col-md-12" id="code_dishwasher">
-                </div>
-                <div class="col-sm-6 mb-2 align-self-center">
-                  <video id="vid_dishwasher" width="100%" preload="metadata" playsinline controls autoplay muted>
-                      <source src="./static/tasks/dishwasher_door/open_dishwasher.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-          </div>
+        <br>
+        <br>
+        <div class="columns is-centered">
+          <h3 class="title is-4">Scaling up Simulation Environments, Tasks and Demonstrations</h3>
         </div>
-      </div>
-      <!--div> environments, task decomposition <-->
-      <div class="center-container">
-        <div class="card mb-4 mt-4 text-dark bg-light four-fifths-card">
-          <h5 class="card-header">Complex Environments with Long-Horizon Tasks and Task Decomposition</h5>
-          <div class="card-body">
-              <p align="left">We import generated and human-made assets in simulation environment. Choose an environment:</p>
-              <select class="form-select" size="5" aria-label="size 5 select example">
-                  <option value="green_pepper">
-                      1) Asset: Green Pepper, Refrigerator
-                  </option>
-                  <option value="tennis_ball">
-                      2) Asset: Tennis Ball, Cabinet
-                  </option>
-              </select>
-    
-              <div class="row" id="content_green_pepper" >
-                <div class="col-md-12" id="code_green_pepper">
-                </div>
-                <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
-                  <video id="vid_green_pepper" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
-                      <source src="./static/tasks/green_pepper/veggie_refridgerator.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-
-              <div class="row" id="content_tennis_ball" style="display:none">
-                <div class="col-md-12" id="code_tennis_ball">
-                </div>
-                <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
-                  <video id="vid_tennis_ball" width="100%" preload="metadata" playsinline controls class="mx-auto" autoplay muted>
-                      <source src="./static/tasks/tennis_ball/put_tennis_ball_cabinet.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-          </div>
+        <br> 
+        <div class="columns is-centered">
+          <video id="tasks1" autoplay muted loop playsinline height="720" width="720">
+            <source src="./static/videos/articulated_policy.mp4" type="video/mp4">
+          </video>
         </div>
+
       </div>
     </div>
   </div>
-</section>
-
-<!-- Scaling -->
-<section class="section">
-  <div class="columns is-centered has-text-centered is-max-desktop">
-    <div class="column is-four-fifths">
-      <h2 class="title is-4">Scaling up Simulation Environments, Tasks and Demonstrations</h2>
-      <div class="content has-text-centered">
-        <div class="videos-container">
-          <div class="video-wrapper">
-            <video id="tasks1" autoplay muted loop playsinline height="720" width="720">
-              <source src="./static/videos/articulated_policy.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
 </section>
 
 <!--div class="container is-fullhd">
