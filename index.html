@@ -74,22 +74,21 @@
         <div class="column has-text-centered">
           <h1 class="title is-2 publication-title"> Gen2Sim: Scaling up Simulation with Generative Models for Robotic Skill Learning </h1>
           <!--h3 class="title is-5 conference-authors">CoRL 2023 Submission</h3-->
-<!--           <div class="is-size-5 publication-authors">
+          <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="">Pushkal Katara</a>,</span>
+              <a href="https://pushkalkatara.github.io/">Pushkal Katara</a>,</span>
             <span class="author-block">
-              <a href="">Zhou Xian</a>,</span>
+              <a href="https://www.zhou-xian.com/">Zhou Xian</a>,</span>
             <span class="author-block">
-              <a href="">Katerina Fragkiadaki</a>
+              <a href="https://www.cs.cmu.edu/~katef/">Katerina Fragkiadaki</a>
             </span>
-          </div> -->
-<!--           <div class="is-size-5 publication-authors">
-            <span class="author-block">Carnegie Mellon University</span>
-          </div> -->
+          </div>
+          <br>
+          <img src="./static/images/cmu.png" width="30%">
           <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2011.12948"
+                  <a href=""
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <i class="ai ai-arxiv"></i>
@@ -98,7 +97,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                  <a href=""
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <i class="fab fa-youtube"></i>
@@ -107,7 +106,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://github.com/google/nerfies"
+                  <a href="https://github.com/pushkalkatara/Gen2Sim"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <i class="fab fa-github"></i>
@@ -126,8 +125,11 @@
 <section class="hero teaser">
   <div class="container is-fullhd">
     <div class="hero-body">
-      <video id="teaser" autoplay="" muted="" loop="" height="100%">
+      <!-- <video id="teaser" autoplay="" muted="" loop="" height="100%">
         <source src="./static/videos/teaser_compressed_final.mp4" type="video/mp4">
+      </video> -->
+      <video id="teaser" autoplay muted loop playsinline>
+        <source src="./static/videos/articulated_policy.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
       <br>
@@ -201,9 +203,10 @@
         <div class="columns is-centered">
           <h3 class="title is-3">Gen2Sim Overview</h3>
         </div>
-        <video id="overview" autoplay="" muted="" loop="">
+        <!-- <video id="overview" autoplay="" muted="" loop="">
           <source src="./static/videos/overview_video.mp4" type="video/mp4">
-        </video>
+        </video> -->
+        <img src="./static/videos/overview_image.png" alt="overview diagram">
         <br>
         <br>
         <h5 class="title is-5">1. Asset Generation</h5>
@@ -235,7 +238,7 @@
         <br>
         <br>
         <br>
-        <h6 class="title is-6">2. Task and Reward Generation using LLMs</h6>
+        <h6 class="title is-5">2. Task and Reward Generation using LLMs</h6>
         <div class="is-centered has-text-centered">
           <video id="llm" autoplay muted loop playsinline>
             <source src="./static/videos/llm.mp4" type="video/mp4">
@@ -265,7 +268,7 @@
                     <option value="yellow_pepper">
                         5) Yellow Pepper
                     </option>
-                    <option value="bottom_right_door_cabinet">
+                    <!-- <option value="bottom_right_door_cabinet">
                         6) Cabinet; Part: Bottom Right Door
                     </option>
                     <option value="top_right_drawer_table">
@@ -273,7 +276,7 @@
                     </option>
                     <option value="left_door_cabinet">
                         8) Cabinet; Part: Left Door
-                    </option>
+                    </option> -->
                     <option value="dishwasher">
                         9) Dishwasher; Part: Door
                     </option>
@@ -398,17 +401,17 @@
             </div>
           </div>
         </div>
-        <br>
+        <!-- <br>
         <br>
         <div class="columns is-centered">
           <h3 class="title is-4">Scaling up Simulation Environments, Tasks and Demonstrations</h3>
         </div>
         <br> 
         <div class="columns is-centered">
-          <video id="tasks1" autoplay muted loop playsinline height="720" width="720">
+          <video id="tasks1" autoplay muted loop playsinline>
             <source src="./static/videos/articulated_policy.mp4" type="video/mp4">
           </video>
-        </div>
+        </div> -->
 
       </div>
     </div>
