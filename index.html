@@ -151,22 +151,25 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We propose Generation to Simulation: <b>Gen2Sim</b>, a method for scaling up robot skill learning in simulation by automatically generating 
-            simulation 3D assets, scenes, task definitions, task decompositions and reward functions, capitalizing over large pre-trained 
-            generative models of language and images. 
+            Generalist robot manipulators need to learn a wide variety of manipulation skills across diverse environments. 
+            Current robot training pipelines rely on humans to provide kinesthetic demonstrations or to program simulation 
+            environments and to code up reward functions for reinforcement learning. Such human involvement is an important 
+            bottleneck towards scaling up robot learning across diverse tasks and environments. 
           </p>
           <p>
-            We propose methods for 3D simulation asset generation from lifting open-world 2D object images 
-            using image diffusion models and LLM queries for plausible ranges of physical parameters. We then chain-of-thought prompt LLMs to parse 
-            URDF files of generated and human-developed assets to generate task descriptions, task decompositions, and corresponding reward functions, 
-            based on the assets and scene affordances. We train reinforcement learning policies in the simulation environments using our generated tasks 
-            supervised by the generated reward functions. 
-          </p>
+            We propose Generation to Simulation (Gen2Sim), a method for scaling up robot skill learning in simulation by
+            automating generation of 3D assets, task descriptions, task decompositions and reward functions using large 
+            pre-trained generative models of language and vision. We generate 3D assets for simulation by lifting open-world 
+            2D object-centric images to 3D using image diffusion models and querying LLMs to determine plausible physics parameters. 
+            Given URDF files of generated and human-developed assets, we chain-of-thought prompt LLMs to map these to relevant task 
+            descriptions, temporal decompositions, and corresponding python reward functions for reinforcement learning. 
           <p>
-            We demonstrate successful policy learning for a number of long horizon tasks using Gen2Sim, 
-            without any human involvement. We show construction of simulated twin environment based on real world observations, and successful transfer 
-            of the trained robot trajectories from simulation to the real world. Our work contributes hundreds of simulated assets and tasks for articulated 
-            and novel 3D object assets, taking a step towards fully autonomous robotic manipulation skill acquisition in simulation. 
+            We show Gen2Sim succeeds in learning policies for diverse long horizon tasks, where reinforcement learning with non 
+            temporally decomposed reward functions fails. Gen2Sim provides a viable path towards scaling up reinforcement learning 
+            of robot manipulators in simulation, both through diversifying and supersizing task and environment development, but also 
+            though facilitating discovery of reinforcement learnt behaviours using temporal task decomposition in RL. Our work 
+            contributes hundreds of simulated assets, tasks and demonstrations, taking a step towards fully autonomous robotic manipulation 
+            skill acquisition in simulation.
           </p>
         </div>
       </div>
@@ -203,10 +206,10 @@
         <div class="columns is-centered">
           <h3 class="title is-3">Gen2Sim Overview</h3>
         </div>
-        <!-- <video id="overview" autoplay="" muted="" loop="">
+        <video id="overview" autoplay="" muted="" loop="">
           <source src="./static/videos/overview_video.mp4" type="video/mp4">
-        </video> -->
-        <img src="./static/videos/overview_image.png" alt="overview diagram">
+        </video>
+        <!-- <img src="./static/videos/overview_image.png" alt="overview diagram"> -->
         <br>
         <br>
         <h5 class="title is-5">1. Asset Generation</h5>
