@@ -88,7 +88,7 @@
           <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href=""
+                  <a href="https://arxiv.org/abs/2310.18308"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <i class="ai ai-arxiv"></i>
@@ -154,22 +154,23 @@
             Generalist robot manipulators need to learn a wide variety of manipulation skills across diverse environments. 
             Current robot training pipelines rely on humans to provide kinesthetic demonstrations or to program simulation 
             environments and to code up reward functions for reinforcement learning. Such human involvement is an important 
-            bottleneck towards scaling up robot learning across diverse tasks and environments. 
+            bottleneck towards scaling up robot learning across diverse tasks and environments.
           </p>
           <p>
-            We propose Generation to Simulation (Gen2Sim), a method for scaling up robot skill learning in simulation by
+            We propose Generation to Simulation (Gen2Sim), a method for scaling up robot skill learning in simulation by 
             automating generation of 3D assets, task descriptions, task decompositions and reward functions using large 
             pre-trained generative models of language and vision. We generate 3D assets for simulation by lifting open-world 
-            2D object-centric images to 3D using image diffusion models and querying LLMs to determine plausible physics parameters. 
-            Given URDF files of generated and human-developed assets, we chain-of-thought prompt LLMs to map these to relevant task 
-            descriptions, temporal decompositions, and corresponding python reward functions for reinforcement learning. 
+            2D object-centric images to 3D using image diffusion models and querying LLMs to determine plausible physics 
+            parameters. Given URDF files of generated and human-developed assets, we chain-of-thought prompt LLMs to map 
+            these to relevant task descriptions, temporal decompositions, and corresponding python reward functions for 
+            reinforcement learning.
           <p>
-            We show Gen2Sim succeeds in learning policies for diverse long horizon tasks, where reinforcement learning with non 
-            temporally decomposed reward functions fails. Gen2Sim provides a viable path towards scaling up reinforcement learning 
-            of robot manipulators in simulation, both through diversifying and supersizing task and environment development, but also 
-            though facilitating discovery of reinforcement learnt behaviours using temporal task decomposition in RL. Our work 
-            contributes hundreds of simulated assets, tasks and demonstrations, taking a step towards fully autonomous robotic manipulation 
-            skill acquisition in simulation.
+            We show Gen2Sim succeeds in learning policies for diverse long horizon tasks, where reinforcement learning with 
+            non temporally decomposed reward functions fails. Gen2Sim provides a viable path for scaling up reinforcement 
+            learning for robot manipulators in simulation, both by diversifying and expanding task and environment development, 
+            and by facilitating the discovery of reinforcement-learned behaviors through temporal task decomposition in RL. 
+            Our work contributes hundreds of simulated assets, tasks and demonstrations, taking a step towards fully autonomous 
+            robotic manipulation skill acquisition in simulation.
           </p>
         </div>
       </div>
