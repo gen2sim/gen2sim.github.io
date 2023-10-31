@@ -154,23 +154,18 @@
             Generalist robot manipulators need to learn a wide variety of manipulation skills across diverse environments. 
             Current robot training pipelines rely on humans to provide kinesthetic demonstrations or to program simulation 
             environments and to code up reward functions for reinforcement learning. Such human involvement is an important 
-            bottleneck towards scaling up robot learning across diverse tasks and environments.
-          </p>
-          <p>
-            We propose Generation to Simulation (Gen2Sim), a method for scaling up robot skill learning in simulation by 
-            automating generation of 3D assets, task descriptions, task decompositions and reward functions using large 
-            pre-trained generative models of language and vision. We generate 3D assets for simulation by lifting open-world 
-            2D object-centric images to 3D using image diffusion models and querying LLMs to determine plausible physics 
-            parameters. Given URDF files of generated and human-developed assets, we chain-of-thought prompt LLMs to map 
-            these to relevant task descriptions, temporal decompositions, and corresponding python reward functions for 
-            reinforcement learning.
-          <p>
-            We show Gen2Sim succeeds in learning policies for diverse long horizon tasks, where reinforcement learning with 
-            non temporally decomposed reward functions fails. Gen2Sim provides a viable path for scaling up reinforcement 
-            learning for robot manipulators in simulation, both by diversifying and expanding task and environment development, 
-            and by facilitating the discovery of reinforcement-learned behaviors through temporal task decomposition in RL. 
-            Our work contributes hundreds of simulated assets, tasks and demonstrations, taking a step towards fully autonomous 
-            robotic manipulation skill acquisition in simulation.
+            bottleneck towards scaling up robot learning across diverse tasks and environments. We propose Generation to Simulation (Gen2Sim), 
+            a method for scaling up robot skill learning in simulation by automating generation of 3D assets, task descriptions, 
+            task decompositions and reward functions using large pre-trained generative models of language and vision. 
+            We generate 3D assets for simulation by lifting open-world 2D object-centric images to 3D using image diffusion models 
+            and querying LLMs to determine plausible physics parameters. Given URDF files of generated and human-developed assets, 
+            we chain-of-thought prompt LLMs to map these to relevant task descriptions, temporal decompositions, and corresponding 
+            python reward functions for reinforcement learning. We show Gen2Sim succeeds in learning policies for diverse long horizon tasks, 
+            where reinforcement learning with non temporally decomposed reward functions fails. Gen2Sim provides a viable path 
+            for scaling up reinforcement learning for robot manipulators in simulation, both by diversifying and expanding task 
+            and environment development, and by facilitating the discovery of reinforcement-learned behaviors through temporal 
+            task decomposition in RL. Our work contributes hundreds of simulated assets, tasks and demonstrations, taking a step 
+            towards fully autonomous robotic manipulation skill acquisition in simulation.
           </p>
         </div>
       </div>
@@ -204,9 +199,9 @@
   <div class="container is-max-widescreen">
     <div class="rows">
       <div class="row is-full-width half-width">
-        <div class="columns is-centered">
+        <!-- <div class="columns is-centered">
           <h3 class="title is-3">Gen2Sim Overview</h3>
-        </div>
+        </div> -->
         <video id="overview" autoplay="" muted="" loop="">
           <source src="./static/videos/overview_video.mp4" type="video/mp4">
         </video>
@@ -221,52 +216,25 @@
           </video>
         </div>
         <br>
-        <h6 class="title is-6">b. Physics Parameters with LLMs</h6>
-        <div class="column">
-          <img src="./static/images/physics.png" width=640 height=480 alt="app_geo">
-          <video id="physics" autoplay muted loop playsinline width="415px">
-            <source src="./static/videos/physics.mp4" type="video/mp4">
-          </video>
-        </div>
-        <br>
-        <br>
-        <br>
-        <h6 class="title is-5">2. Task and Reward Generation using LLMs</h6>
-        <div class="is-centered has-text-centered">
-          <video id="llm" autoplay muted loop playsinline>
-            <source src="./static/videos/llm.mp4" type="video/mp4">
-          </video>
-        </div>
-        <br>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<br>
-<br>
-<section class="section">
-  <div class="container is-max-widescreen">
-    <div class="rows">
-      <div class="row is-full-width half-width">
-        <div class="columns is-centered">
-          <h3 class="title is-3">Gen2Sim Results</h3>
-        </div>
-        <br>
-        <br>
-        <div class="columns is-centered">
-          <h4 class="title is-4 ">Asset Generation</h4>
-        </div>
-        <br>
         <div class="columns is-centered">  
           <video id="3d_assets" height="1024px" width="1024px" autoplay muted loop playsinline>
             <source src="./static/videos/3d_assets_new.mp4" type="video/mp4">
           </video>
         </div>
         <br>
+        <h6 class="title is-6">b. Physics Parameter Estimation with LLMs</h6>
+        <div class="column">
+          <img src="./static/images/physics.png" width=640 height=480 alt="app_geo">
+          <video id="physics" autoplay muted loop playsinline width="400px">
+            <source src="./static/videos/physics.mp4" type="video/mp4">
+          </video>
+        </div>
         <br>
-        <div class="columns is-centered">
-          <h4 class="title is-4 ">Task and Reward Generation</h4>
+        <h6 class="title is-5">2. Task and Reward Generation with LLMs</h6>
+        <div class="is-centered has-text-centered">
+          <video id="llm" autoplay muted loop playsinline>
+            <source src="./static/videos/llm.mp4" type="video/mp4">
+          </video>
         </div>
         <br>
         <!-- Task and Reward Generation Results-->
@@ -311,7 +279,7 @@
                     </option>
                 </select>
   
-                <div class="row" id="content_faucet" style="display:none">
+                <div class="row" id="content_faucet">
                   <div class="col-md-12" id="code_faucet">
                   </div>
                   <div class="col-sm-6 mb-2 d-flex justify-content-center align-items-center">
@@ -424,6 +392,31 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- <section class="section">
+  <div class="container is-max-widescreen">
+    <div class="rows">
+      <div class="row is-full-width half-width">
+        <div class="columns is-centered">
+          <h3 class="title is-3">Gen2Sim Results</h3>
+        </div>
+        <br>
+        <br>
+        <div class="columns is-centered">
+          <h4 class="title is-4 ">Asset Generation</h4>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="columns is-centered">
+          <h4 class="title is-4 ">Task and Reward Generation</h4>
+        </div>
+        <br>
         <!-- <br>
         <br>
         <div class="columns is-centered">
@@ -440,7 +433,7 @@
     </div>
   </div>
 </div>
-</section>
+</section> -->
 
 <!--div class="container is-fullhd">
   <hr class="solid">
