@@ -1,0 +1,89 @@
+Q: The environment contains the following assets:
+1.  asset_name: "microwave"
+    part_cofiguration:
+        Part 1: "body"
+        Part 2: "door"
+            - link_name: "link_0"
+            - joint_name: "joint_0"
+            - joint_type: "revolute"
+            - limit: ["lower": 0, "upper": 1]
+        Part 3: "handle"
+            - link_name: "handle_0"
+            - joint_name: "handlejoint_0"
+            - joint_type: "fixed"
+
+Available APIs from the simulator are:
+# returns the pose of the link
+get_pose_by_link_name(asset_name, link_name)
+# returns the pose of the robot gripper
+get_robot_gripper_pose(asset_name, link_name) 
+# returns the state of the joint
+get_state_by_joint_name(asset_name, joint_name)
+# returns the limit of the joint
+get_limits_by_joint_name(asset_name, joint_name)
+
+Note:
+1. Only use the available APIs from the simulator. 
+2. Generate the reward function code snippets in Python.
+
+List meaningful manipulation tasks that can be performed 
+in this environment. Give subtask decomposition and the 
+order of execution to solve the task. Also, provide the 
+reward function for each subtask.
+
+A: The following tasks can be performed in this environment:
+1. Open the Microwave Door
+2. Close the Microwave Door
+
+Task: OpenMicrowaveDoor
+Task Description: open the door of the microwave
+```
+def compute_reward(env):
+    # reward function
+    door_handle_pose = env.get_pose_by_link_name("microwave", "handle_0")
+    gripper_pose = env.get_robot_gripper_pose()
+    distance_gripper_to_handle = torch.norm(door_handle_pose - gripper_pose, dim=-1)
+    door_state = env.get_state_by_joint_name("microwave", "joint_0")
+    cost = distance_gripper_to_handle - door_state
+    reward = - cost
+
+    # success condition
+    target_door_state = env.get_limits_by_joint_name("microwave", "joint_0")["upper"]
+    success = torch.abs(door_state - target_door_state) < 0.1
+
+    return reward, success
+```
+
+Task: CloseMicrowaveDoor
+Task Description: close the door of the microwave
+```
+def compute_reward(env):
+    # reward function
+    door_handle_pose = env.get_pose_by_link_name("microwave", "handle_0")
+    gripper_pose = env.get_robot_gripper_pose()
+    distance_gripper_to_handle = torch.norm(door_handle_pose - gripper_pose, dim=-1)
+    door_state = env.get_state_by_joint_name("microwave", "joint_0")
+    cost = distance_gripper_to_handle - door_state
+    reward = - cost
+
+    # success condition
+    target_door_state = env.get_limits_by_joint_name("microwave", "joint_0")["upper"]
+    success = torch.abs(door_state - target_door_state) < 0.1
+
+    return reward, success
+```
+
+Q: The environment contains the following assets:
+1.  asset_name: "sanitiser"
+    part_cofiguration:
+        Part 1: "body"
+        Part 2: "tip"
+            - link_name: "link_0"
+            - joint_name: "joint_0"
+            - joint_type: "prismatic"
+            - limit: ["lower": 0, "upper": 1]
+
+List meaningful manipulation tasks that can be performed 
+in this environment. Give subtask decomposition and the 
+order of execution to solve the task. Also, provide the 
+reward function for each subtask.

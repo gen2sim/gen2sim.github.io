@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Eureka | Human-Level Reward Design via Coding Large Language Models</title>
+    <title>Gen2Sim</title>
 
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -35,53 +35,29 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-1 publication-title">Eureka: Human-Level Reward Design via Coding Large
-                            Language Models</h1>
+                        <h1 class="title is-1 publication-title">Gen2Sim: Scaling up Robot Learning in Simulation with Generative Models</h1>
                         <!-- <h3 class="title is-4 conference-authors"><a target="_blank" href="https://icml.cc/">ICML 2023</a>
                     </h3> -->
                         <div class="is-size-5 publication-authors">
                             <span class="author-block">
-                                <a target="_blank" href="https://www.seas.upenn.edu/~jasonyma/">
-                                    Jason&#160;Ma</a>
-                                    <a href="mailto:jasonyma@seas.upenn.edu">
+                                <a target="_blank" href="https://pushkalkatara.github.io/">
+                                    Pushkal&#160;Katara*</a>
+                                    <a href="mailto:pkatara@andrew.cmu.edu">
                                         <span class="icon">
                                             <i class="fa fa-envelope"></i>
                                         </span>
                                     </a>
-                                    <sup>1 2</sup>,
-                                <a target="_blank"
-                                    href="https://www.seas.upenn.edu/~wjhliang/">William&#160;Liang</a><sup>2</sup>,
-
-                                <a target="_blank" href="https://guanzhi.me/">Guanzhi&#160;Wang</a><sup>1 3</sup>,
-                                <a target="_blank"
-                                    href="https://ai.stanford.edu/~dahuang/">De-An&#160;Huang</a><sup>1</sup>,
-                                <br>
-                                <a target="_blank"
-                                    href="https://obastani.github.io/">Osbert&#160;Bastani</a><sup>2</sup>,
-                                <a target="_blank"
-                                    href="https://www.seas.upenn.edu/~dineshj/">Dinesh&#160;Jayaraman</a><sup>2</sup>,
-
-                                <a target="_blank" href="https://www.cs.utexas.edu/~yukez/">Yuke&#160;Zhu</a><sup>1
-                                    4</sup>,
-                                <a target="_blank" href="https://jimfan.me/">Linxi&#160;"Jim"&#160;Fan</a>
-                                <a href="mailto:dr.jimfan.ai@gmail.com">
-                                    <span class="icon">
-                                        <i class="fa fa-envelope"></i>
-                                    </span>
+                                    <sup>1</sup>,
+                                <a target="_blank" href="https://www.zhou-xian.com/">Zhou&#160;Xian*</a>
                                 </a>
-                                <sup>1&#8225</sup>,
+                                <sup>1</sup>,
                                 <a target="_blank"
-                                    href="http://tensorlab.cms.caltech.edu/users/anima/">Anima&#160;Anandkumar</a><sup>1
-                                    3&#8225</sup>
+                                    href="http://tensorlab.cms.caltech.edu/users/anima/">Katerina&#160;Fragkiadaki</a><sup>1</sup>
                             </span>
                         </div>
 
                         <div class="is-size-5 publication-authors">
-                            <span class="author-block"><sup>1</sup>NVIDIA; </span>
-                            <span class="author-block"><sup>2</sup>UPenn; </span>
-                            <span class="author-block"><sup>3</sup>Caltech; </span>
-                            <span class="author-block"><sup>4</sup>UT Austin;</span>
-                            <span class="author-block"><sup>&#8225;</sup>Equal Advising </span>
+                            <span class="author-block"><sup>1</sup>Carnegie Mellon University </span>
                         </div>
                         <div class="is-size-5 publication-authors">
 
@@ -89,7 +65,7 @@
                                     <span class="icon">
                                         <i class="fa fa-envelope"></i>
                                     </span>
-                            Corresponding authors: jasonyma@seas.upenn.edu, dr.jimfan.ai@gmail.com
+                            Corresponding author: pkatara@andrew.cmu.edu
                         </span>
                         </div>
                         <!-- <div class="is-size-5 publication-authors">
@@ -105,7 +81,7 @@
                             <div class="publication-links">
                                 <!-- TODO REPLACE ALL LINKS -->
                                 <span class="link-block">
-                                    <a target="_blank" href="https://arxiv.org/abs/2310.12931"
+                                    <a target="_blank" href="https://arxiv.org/abs/2310.18308"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="ai ai-arxiv"></i>
@@ -115,14 +91,14 @@
                                 </span>
 
                                 <span class="link-block">
-                                    <a target="_blank" href="assets/eureka_paper.pdf"
+                                    <!-- <a target="_blank" href="assets/eureka_paper.pdf"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fas fa-file-pdf"></i>
                                         </span>
                                         <span>PDF</span>
-                                    </a>
-                                    <a target="_blank" href="https://github.com/eureka-research/Eureka"
+                                    </a> -->
+                                    <a target="_blank" href="https://github.com/pushkalkatara/Gen2Sim"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fab fa-github"></i>
@@ -164,8 +140,8 @@
         <div class="container is-max-desktop">
             <!-- Abstract. -->
             <div class="columns is-centered has-text-centered">
-                <video poster="" id="" autoplay controls muted loop width="100%" playbackRate=2.0 style="border-radius: 5px;">
-                    <source src="videos/eureka_zoomout.mp4" type="video/mp4">
+                <video poster="" id="" autoplay controls muted loop width="100%" playbackRate=1.0>
+                    <source src="videos/articulated_policy.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -179,7 +155,21 @@
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
                         <p style="font-size: 125%">
-                            Large Language Models (LLMs) have excelled as high-level semantic planners for sequential decision-making tasks. However, harnessing them to learn complex low-level manipulation tasks, such as dexterous pen spinning, remains an open problem. We bridge this fundamental gap and present Eureka, a human-level reward design algorithm powered by LLMs. Eureka exploits the remarkable zero-shot generation, code-writing, and in-context improvement capabilities of state-of-the-art LLMs, such as GPT-4, to perform evolutionary optimization over reward code. The resulting rewards can then be used to acquire complex skills via reinforcement learning. Without any task-specific prompting or pre-defined reward templates, Eureka generates reward functions that outperform expert human-engineered rewards. In a diverse suite of 29 open-source RL environments that include 10 distinct robot morphologies, Eureka outperforms human experts on <b>83%</b> of the tasks, leading to an average normalized improvement of <b>52%</b>. The generality of Eureka also enables a new gradient-free in-context learning approach to reinforcement learning from human feedback (RLHF), readily incorporating human inputs to improve the quality and the safety of the generated rewards without model updating. Finally, using Eureka rewards in a curriculum learning setting, we demonstrate for the first time, a simulated Shadow Hand capable of performing pen spinning tricks, adeptly manipulating a pen in circles at rapid speed.
+                            Generalist robot manipulators need to learn a wide variety of manipulation skills across diverse environments. 
+                            Current robot training pipelines rely on humans to provide kinesthetic demonstrations or to program simulation 
+                            environments and to code up reward functions for reinforcement learning. Such human involvement is an important 
+                            bottleneck towards scaling up robot learning across diverse tasks and environments. We propose Generation to Simulation (Gen2Sim), 
+                            a method for scaling up robot skill learning in simulation by automating generation of 3D assets, task descriptions, 
+                            task decompositions and reward functions using large pre-trained generative models of language and vision. 
+                            We generate 3D assets for simulation by lifting open-world 2D object-centric images to 3D using image diffusion models 
+                            and querying LLMs to determine plausible physics parameters. Given URDF files of generated and human-developed assets, 
+                            we chain-of-thought prompt LLMs to map these to relevant task descriptions, temporal decompositions, and corresponding 
+                            python reward functions for reinforcement learning. We show Gen2Sim succeeds in learning policies for diverse long horizon tasks, 
+                            where reinforcement learning with non temporally decomposed reward functions fails. Gen2Sim provides a viable path 
+                            for scaling up reinforcement learning for robot manipulators in simulation, both by diversifying and expanding task 
+                            and environment development, and by facilitating the discovery of reinforcement-learned behaviors through temporal 
+                            task decomposition in RL. Our work contributes hundreds of simulated assets, tasks and demonstrations, taking a step 
+                            towards fully autonomous robotic manipulation skill acquisition in simulation.
                         </p>
                     </div>
                 </div>
@@ -192,12 +182,10 @@
             <div class="rows">
                 <div class="rows is-centered ">
                     <div class="row is-full-width">
-                        <h2 class="title is-3"><span class="dvima">Eureka Rewards and Policies</span></h2>
+                        <h2 class="title is-3"><span class="dvima">Gen2Sim Skill Acquisition Demo</span></h2>
                         <p style="font-size: 125%">
-                            In this demo, we visualize the unmodified best Eureka reward
-                            for each
-                            environment and the policy trained using this reward. Our environment suite spans 10 robots and 29 distinct tasks across two 
-                            open-sourced benchmarks, Isaac Gym (Isaac) and Bidexterous Manipulation (Dexterity).
+                            In this demo, we visualize the generated environment, task descriptions, task decomposition and reward function 
+                            from Gen2Sim. We show manipulation skills acquired while interacting with assets with varying part affordances and part structures. We also show skill chaining to achieve long-horizon tasks in complex environments.
                         </p>
                     </div>
                 </div>
@@ -205,134 +193,42 @@
             <br>
             <div class="columns" style="align-items: end;">
                 <div class="column is-half">
-                    <p style="font-size: 1.5em"><b>Isaac</b></p>
+                    <p style="font-size: 1.5em"><b>Manipulation Skills</b></p>
                     <div class="col-md-4 col-sm-4 col-xs-4">
-                        <img src="videos/task_final/allegro_hand.png" width="18%" style="border-radius: 5px;" alt='<b>AllegroHand</b>, best Eureka reward:
+                        <img src="videos/part_affordances/faucet/turn_faucet.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
                         [sep]
-                        assets/reward_functions/allegro_hand.txt' onclick="populateDemo(this, 1);">
+                        videos/part_affordances/faucet/response.txt' onclick="populateDemo(this, 1);">
 
-                        <img src="videos/task_final/ant.png" width="18%" style="border-radius: 5px;" alt='<b>Ant</b>, best Eureka reward:
+                        <img src="videos/part_affordances/sanitiser/press_sanitiser.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
                         [sep]
-                        assets/reward_functions/ant.txt' onclick="populateDemo(this, 1);">
+                        videos/part_affordances/sanitiser/response.txt' onclick="populateDemo(this, 1);">
 
-                        <img src="videos/task_final/anymal.png" width="18%" style="border-radius: 5px;" alt='<b>Anymal</b>, best Eureka reward:
+                        <img src="videos/part_affordances/switch/turn_on_switch.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward: 
                         [sep]
-                        assets/reward_functions/anymal.txt' onclick="populateDemo(this, 1);">
+                        videos/part_affordances/switch/response.txt' onclick="populateDemo(this, 1);">
 
-                        <img src="videos/task_final/ball_balance.png" width="18%" style="border-radius: 5px;" alt='<b>BallBalance</b>, best Eureka reward:
+                        <img src="videos/part_affordances/toaster/toaster.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
                         [sep]
-                        assets/reward_functions/ball_balance.txt' onclick="populateDemo(this, 1);">
+                        videos/part_affordances/toaster/response.txt' onclick="populateDemo(this, 1);">
 
-                        <img src="videos/task_final/cartpole.png" width="18%" style="border-radius: 5px;" alt='<b>Cartpole</b>, best Eureka reward:
+                        <img src="videos/long_horizon/tennis_ball/put_tennis_ball_cabinet.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
                         [sep]
-                        assets/reward_functions/cartpole.txt' onclick="populateDemo(this, 1);">
+                        videos/long_horizon/tennis_ball/response.txt' onclick="populateDemo(this, 1);">
 
-                        <img src="videos/task_final/franka_cabinet.png" width="18%" style="border-radius: 5px;" alt='<b>FrankaCabinet</b>, best Eureka reward:
+                        <img src="videos/long_horizon/veggie_refridgerator/veggie_refridgerator.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
                         [sep]
-                        assets/reward_functions/franka_cabinet.txt' onclick="populateDemo(this, 1);">
+                        videos/long_horizon/veggie_refridgerator/response.txt' onclick="populateDemo(this, 1);">
 
-                        <img src="videos/task_final/humanoid.png" width="18%" style="border-radius: 5px;" alt='<b>Humanoid</b>, best Eureka reward:
+                        <img src="videos/part_structures/left_door_cabinet/cabinet_open_left_door.png" width="18%" style="border-radius: 5px;" alt='Generated Task and Reward:
                         [sep]
-                        assets/reward_functions/humanoid.txt' onclick="populateDemo(this, 1);">
+                        videos/part_structures/left_door_cabinet/response.txt' onclick="populateDemo(this, 1);">
 
-                        <img src="videos/task_final/quadcopter.png" width="18%" style="border-radius: 5px;" alt='<b>Quadcopter</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/quadcopter.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/shadow_hand.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHand</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand.txt' onclick="populateDemo(this, 1);">
                     </div>
 
-                    <br>
-                    <p style="font-size: 1.5em"><b>Dexterity</b></p>
-                    <div class="col-md-4 col-sm-4 col-xs-4">
-                        <img src="videos/task_final/bidex_block_stacking.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandBlockStack</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_block_stack.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_bottle_cap.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandBottleCap</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_bottle_cap.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_catch_abreast.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandCatchAbreast</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_catch_abreast.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_catch_over2underarm.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandCatchOver2Underarm</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_catch_over_2_underarm.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_catch_underarm.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandCatchUnderarm</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_catch_underarm.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_door_close_inward.png" width="18%" style="border-radius: 5px;"
-                            alt='<b>ShadowHandDoorCloseInward</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_door_close_inward.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_door_close_outward.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandDoorCloseOutward</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_door_close_outward.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_door_open_inward.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandDoorOpenInward</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_door_open_inward.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_door_open_outward.png" width="18%" style="border-radius: 5px;"
-                            alt='<b>ShadowHandDoorOpenOutward</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_door_open_outward.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_grasp_and_place.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandGraspAndPlace</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_grasp_and_place.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_kettle.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandKettle</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_kettle.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_lift_undearm.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandLiftUnderarm</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_lift_underarm.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_over.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandOver</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_over.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_pen.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandPen</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_pen.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_push_block.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandPushBlock</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_push_block.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_re_orientation.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandReorientation</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_reorientation.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_scissors.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandScissors</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_scissors.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_swing_cup.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandSwingCup</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_swing_cup.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_switch.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandSwitch</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_switch.txt' onclick="populateDemo(this, 1);">
-
-                        <img src="videos/task_final/bidex_two_catch_underarm.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandTwoCatchUnderarm</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/shadow_hand_two_catch_underarm.txt' onclick="populateDemo(this, 1);">
-                    </div>
                 </div>
                 <div class="row border rounded" style="padding-top:12px; padding-bottom:12px;">
                     <div class="col-md-6">
-                        <video id="demo-video-1" style="border-radius: 5px;" autoplay loop muted webkit-playsinline
+                        <video id="demo-video-1" style="border-radius: 5px; width: 100%; height: 320px;" autoplay loop muted webkit-playsinline
                             playsinline onclick="setAttribute('controls', 'true');">
                             <source id="expandedImg-1" src="videos/placeholder.mp4" type="video/mp4">
                         </video>
@@ -343,7 +239,7 @@
                 <div id="imgtext-1" style="font-size: 1.5em">Select an image above:</div>
                 <div>
                     <pre
-                        class="p-1"><code class="language-python" id="answer-1">Eureka response shown within code block.</code></pre>
+                        class="p-1"><code class="language-python" id="answer-1">Gen2Sim response shown within code block.</code></pre>
                 </div>
             </div>
         </div>
@@ -354,106 +250,17 @@
             <div class="rows">
                 <div class="rows is-centered ">
                     <div class="row is-full-width">
-                        <h2 class="title is-3"><span class="dvima">Eureka Pen Spinning Gallery</span></h2>
-                        <p style="font-size: 125%">
-                            Combining Eureka with curriculum learning, we demonstrate for the first time a Shadow Hand performing various pen spinning tricks.
-                            Our main pen spinning axis (center video in the grid) is perpendicular to the palm of the hand, thus defining the spin as parallel to the palm—similar to the ''finger pass'' trick. In addition, we also train several other variations with different axes where each xyz component is chosen from [-1,0,1], resulting in numerous unique patterns.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="hero is-light is-small"> -->
-        <div>
-
-            <div class="hero-body">
-                <div class="container is-max-desktop">
-                    <div class="columns is-centered has-text-centered">
-                        <video poster="" id="" autoplay controls muted loop width="80%" playbackRate=2.0 style="border-radius: 5px;">
-                            <source src="videos/pen_styles.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-                <br>
-                <div class="container">
-                    <div id="results-carousel" class="carousel results-carousel">
-                        <div class="item">
-                            <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0>
-                                <source src="videos/pen_gallery/pen_spin_center.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="item">
-                            <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0>
-                                <source src="videos/pen_gallery/pen_spin_upside_down.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="item">
-                            <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0>
-                                <source src="videos/pen_gallery/pen_spin_custom_-11-1.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="item">
-                            <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0>
-                                <source src="videos/pen_gallery/pen_spin_custom_-101.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="item">
-                            <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0>
-                                <source src="videos/pen_gallery/pen_spin_custom_-110.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="item">
-                            <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0>
-                                <source src="videos/pen_gallery/pen_spin_custom_-1.0,1.0,-1.0.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="item">
-                            <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0>
-                                <source src="videos/pen_gallery/pen_spin_custom_1.0,0.0,0.0.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="item">
-                            <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0>
-                                <source src="videos/pen_gallery/pen_spin_custom_0-11.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="item">
-                            <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0>
-                                <source src="videos/pen_gallery/pen_spin_custom_withflip_0.0,-1.0,0.0.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="section">
-        <div class="container is-max-widescreen">
-            <div class="rows">
-                <div class="rows is-centered ">
-                    <div class="row is-full-width">
-                        <h2 class="title is-3"><span class="dvima">Eureka Components</span></h2>
+                        <h2 class="title is-3"><span class="dvima">Gen2Sim Components</span></h2>
 
                         <!-- <img src="assets/images/eureka.png" class="interpolation-image" alt=""
                             style="display: block; margin-left: auto; margin-right: auto" />
                         <br> -->
                         <div class="columns is-centered has-text-centered">
-                        <video poster="" id="" autoplay controls muted width="90%" playbackRate=2.0 style="border-radius: 5px;">
-                            <source src="assets/images/eureka.mp4" type="video/mp4">
+                        <video poster="" id="" autoplay controls muted width="90%" playbackRate=8.0 style="border-radius: 5px;">
+                            <source src="videos/overview_video.mp4" type="video/mp4">
                         </video>
                         </div>
-                        <span style="font-size: 125%"><b>Overview.</b> Eureka achieves human-level reward design by in-context <b>evolving</b> reward functions
-                            More specifically, Eureka first takes unmodified environment
-                            source code
-                            and language task description as context to
-                            zero-shot generate executable reward functions from a coding LLM. Then, it iterates
-                            between
-                            evolutionary reward search,
-                            GPU-accelerated reward evaluation, and reward reflection to progressively improve
-                            its reward
-                            outputs.</span>
+                        <span style="font-size: 125%"><b>Overview:</b> We generate 3D assets for simulation by lifting open-world 2D object-centric images to 3D using image diffusion models and querying LLMs to determine plausible physics parameters. Given URDF files of generated and human-developed assets, we chain-of-thought prompt LLMs to map these to relevant task descriptions, temporal decompositions, and corresponding python reward functions for reinforcement learning.</span>
                     </div>
                 </div>
             </div>
@@ -468,26 +275,12 @@
 
                         <div class="columns is-centered has-text-centered">
                             <video poster="" id="" autoplay controls muted loop width="70%" height="100%" playbackRate=2.0 style="border-radius: 5px;">
-                                <source src="videos/eureka_env_context.mp4" type="video/mp4">
+                                <source src="videos/3d_lifting.mp4" type="video/mp4">
                             </video>
                         </div>
                         <span style="font-size: 125%">
-                        <span style="font-weight: bold">Environment as Context.</span> 
-                        By using the raw environment code as context, Eureka can zero-shot generate plausible reward programs, without any task-specific prompt engineering. This allows Eureka to be a <b>generalist</b> reward designer,
-                         readily producing reward functions on first try for all our environments.                        </span>
-                        <br>
-                        <br>
-                        <br>
-
-                        <div class="columns is-centered has-text-centered">
-                        <video poster="" id="" autoplay controls muted loop width="70%" height="100%" playbackRate=2.0 style="border-radius: 5px;">
-                            <source src="videos/shadow_hand_multi.mp4" type="video/mp4">
-                        </video>
-                        </div>
-                        <span style="font-size: 125%">
-                        <span style="font-weight: bold">Rapid Reward Evaluation via Massively Parallel RL.</span> 
-                        Leveraging state-of-the-art GPU-accelerated simulation in NVIDIA Isaac Gym, Eureka is able to quickly evaluate 
-                        the quality of a large batch of reward candidates, enabling scalable search in the reward function space.
+                        <span style="font-weight: bold; font-size: 110%">Asset Generation</span> <br>
+                        We generate <b> Visual, Collision and Physics parameters</b> of a URDF by converting images to 3D meshes using a NeRF distillation pipeline, followed by a differentiable mesh fine-tuning step. We query LLMs about the physics properties like mass, dimensions based on asset's category.
                         </span>
                         <br>
                         <br>
@@ -495,245 +288,47 @@
 
                         <div class="columns is-centered has-text-centered">
                         <video poster="" id="" autoplay controls muted loop width="70%" height="100%" playbackRate=2.0 style="border-radius: 5px;">
-                            <source src="videos/eureka_reward_reflection.mp4" type="video/mp4">
+                            <source src="videos/3d_assets_new.mp4" type="video/mp4">
+                        </video>
+                        </div>
+                        <span style="font-size: 125%">
+                        <span style="font-weight: bold">Generating 3D Assets from in-the-wild images:</span>
+                        We generate hundreds of assets with diverse appearance, geometry and physics.
+                        </span>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                        <div class="columns is-centered has-text-centered">
+                        <video poster="" id="" autoplay controls muted loop width="70%" height="100%" playbackRate=2.0 style="border-radius: 5px;">
+                            <source src="videos/llm.mp4" type="video/mp4">
                         </video>
                         </div>
                         <!-- <img src="assets/images/reward_diff.png" class="interpolation-image" alt="" -->
                         <!-- style="display: block; margin-left: auto; margin-right: auto; max-width: 80%;" /> -->
                         <span style="font-size: 125%">
-                            <span style="font-weight: bold">Eureka Reward Reflection.</span> After reward evaluation, 
-                            Eureka constructs reward reflection that summarizes the key statistics of the RL training. Then, Eureka uses this reward reflection 
-                            to enable the backbone LLM (GPT-4) to flexibly improve the reward functions with many distinct
-                            types of free-form, targeted modification, such as (1) changing the hyperparameter of existing
-                            reward
-                            components, (2)
-                            changing the functional form of existing reward components, and (3) introducing new
-                            reward
-                            components.</span>
+                            <span style="font-weight: bold">Task and Reward Generation</span> <br>
+                            We extract relevant context from URDF files of generated and human-developed assets, and chain-of-thought prompt LLMs to map these to relevant task descriptions, temporal decompositions, and corresponding 
+                            python reward functions. Finally we use PPO, a model-free reinforcement learning algorithm to acquire skills in simulation.
+                        </span>
                         </div>
                 </div>
-
             </div>
         </div>
-    </section>
-
-    <section class="section">
-        <div class="container is-max-widescreen">
-            <div class="rows">
-                <div class="rows is-centered ">
-                    <div class="row is-full-width">
-                        <h2 class="title is-3"><span class="dvima">Experiments</span></h2>
-                        <p style="font-size: 125%">
-                            We thoroughly evaluate Eureka on a diverse suite of robot embodiments and tasks,
-                            testing its
-                            ability
-                            to generate reward functions, solve new tasks, and incorporate various forms of
-                            human input.
-                        </p>
-                        <br>
-                        <p style="font-size: 125%">
-                            Our environments consist of 10 distinct robots and 29 tasks implemented using the
-                            IsaacGym simulator. First, we include 9 original environments from
-                            IsaacGym (Isaac), covering a diverse set of robot morphologies from quadruped,
-                            bipedal,
-                            quadrotor,
-                            cobot arm, to dexterous hands. In addition to coverage over robot form factors, we
-                            ensure
-                            depth in our
-                            evaluation by including all 20 tasks from the Bidexterous Manipulation (Dexterity)
-                            benchmark.
-                            Dexterity contains 20 complex bi-manual tasks that require a pair of Shadow Hands to
-                            solve a wide range of complex manipulation skills, ranging from object handover to
-                            rotating
-                            a cup by
-                            180 degrees
-                        </p>
-                        <br>
-                        <br>
-
-                        <h3 class="title is-4"><span class="dvima">Evaluation Results</span></h3>
-
-                        <img src="assets/images/eureka_bar_chart.png" class="interpolation-image" alt=""
-                            style="display: block; margin-left: auto; margin-right: auto" />
-                        <br>
-                        <span style="font-size: 125%">
-                            <span style="font-weight: bold">Eureka can generate super human-level reward functions.</span> Across 29 tasks, Eureka rewards outperform expert human-written ones on 83% of them with an average normalized improvement of 52%.
-                             In particular, Eureka realizes much greater gains on high-dimensional
-                            dexterity
-                            environments.
-                        </span>
-                        <br>
-                        <br>
-                        <br>
-
-                        <img src="assets/images/eureka_improvement.png" class="interpolation-image" alt=""
-                            style="display: block; width: 60%; margin-left: auto; margin-right: auto" />
-                        <br>
-                        <span style="font-size: 125%">
-                            <span style="font-weight: bold">Eureka evolutionay reward search enables consistent reward improvement over time.</span> Eureka progressively produces better
-                            rewards that eventually exceed human-level by combining large-scale reward search with detailed reward reflection feedback.
-                        </span>
-                        <br>
-                        <br>
-                        <br>
-
-                        <!-- <h3 class="title is-4"><span class="dvima">Comparison with Human Rewards</span></h3> -->
-                        <br>
-
-                        <img src="assets/images/isaac_eureka_correlation.png" class="interpolation-image" alt=""
-                            style="display: block; width: 40%; margin-left: auto; margin-right: auto" />
-                        <br>
-                        <span style="font-size: 125%">
-                            <span style="font-weight: bold">Eureka generates novel rewards.</span>  We 
-                            assess the novelty of Eureka rewards by computing the correlations between Eureka and human rewards on all Isaac tasks.
-                            As shown, Eureka mostly generates weakly correlated reward functions that outperform the human ones. In addition, we observe that 
-                            <b>the harder the task is, the less correlated the Eureka rewards.</b> In a few cases, Eureka rewards are even negatively correlated with human rewards while significantly 
-                            outperforming them. 
-                        </span>
-                        <br>
-                        <br>
-                        <br>
-
-                        <h3 class="title is-4"><span class="dvima">Dexterous Pen Spinning via Curriculum Learning</span></h3>
-
-                        <br>
-
-                        <div class="columns">
-                            <div class="column">
-                                <img src="assets/images/eureka_pen_spinning.png" class="interpolation-image" alt="" />
-                                    <!-- style="display: block; width: 40%; margin-left: auto; margin-right: auto" /> -->
-                                <br>
-                            </div>
-                            <div class="column has-text-centered">
-                                <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0 style="border-radius: 5px;">
-                                    <source src="videos/task_final/shadow_hand.mp4" type="video/mp4">
-                                </video>
-                                <p style="font-size: 110%">Pretrained Pen Reorientation</p>
-                            </div>
-                            <div class="column has-text-centered">
-                                <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0 style="border-radius: 5px;">
-                                    <source src="videos/pen_gallery/pen_spin_center.mp4" type="video/mp4">
-                                </video>
-                                <p style="font-size: 110%">Finetuned Pen Spinning</p>
-                            </div>
-                        </div>
-                        <span style="font-size: 125%">
-                            <span style="font-weight: bold"></span> The pen spinning task requires a Shadow Hand to continuously rotate a pen to achieve some pre-defined spinning patterns for 
-                            as many cycles as possible. We solve this task by (1) instructing Eureka to generate a reward function for re-orienting the pen to random target configurations,
-                            and then (2) fine-tuning this pre-trained policy using the Eureka reward to reach the desired sequence of pen-spinning configurations.
-                            As shown, Eureka fine-tuning quickly adapts the policy successfully spin the pen for many cycles in a row. In contrast, neither pre-trained or learning-from-scratch 
-                            policies can complete even a single cycle.
-                        </span>
-                        <br>
-                        <br>
-                        <br>
-
-                        <h3 class="title is-3"><span class="dvima">Eureka from Human Feedback</span></h3>
-                        <br>
-
-                        <img src="assets/images/bidex_reward_assistant.png" class="interpolation-image" alt=""
-                            style="display: block; width: 70%; margin-left: auto; margin-right: auto" />
-                        <br>
-                        <span style="font-size: 125%">
-                            <span style="font-weight: bold">Eureka effectively improves and benefits from human reward initialization.</span> 
-                        We study whether starting with a human reward function initialization, a common scenario in real-world RL applications, is advantageous for Eureka. 
-                        As shown, regardless of the quality of the human rewards, Eureka improves and benefits from human rewards as Eureka (Human Init.) is uniformly better than both Eureka and Human on all tasks.
-                        </span>
-                        <br>
-                        <br>
-
-                        <img src="assets/images/eureka_rlhf.png" class="interpolation-image" alt=""
-                            style="display: block; width: 100%; margin-left: auto; margin-right: auto" />
-                        <br>
-                        <span style="font-size: 125%">
-                            <span style="font-weight: bold">Eureka enables In-Context Reinforcement Learning from Human Feedback (RLHF).</span> Eureka can incorporate human feedback to modify its rewards so that they progressively induce safer and more human-aligned agent behavior. 
-                            In this example, we show how Eureka can teach a Humanoid how to run upright from a handful of human feedback, which replaces the previous automated reward reflection.
-                             The final learned behavior (Iteration 5) is more preferred by human users by a wide margin than 
-                            the original Eureka-learned Humanoid running gait. 
-                        </span>
-                        <br>
-                        <br>
-                        <br>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container is-max-widescreen">
-            <div class="columns" style="align-items: end;">
-                <div class="column is-half">
-                    <div class="col-md-4 col-sm-4 col-xs-4">
-                        <img src="videos/humanoid_rlhf/humanoid-step0.png" width="40%" style="border-radius: 5px;" alt='<b>Iteration 1</b>, best Eureka reward:
-                        [sep]
-                        assets/rlhf_rewards/humanoid_step0.txt' onclick="populateDemo(this, 2);">
-
-                        <img src="videos/humanoid_rlhf/humanoid-step1.png" width="40%" style="border-radius: 5px;" alt='<b>Iteration 2</b>, Human feedback: <br>
-                        <span style="font-size: 0.8em; line-height: 30px;">The learned behavior resembles forward squat jump; 
-                        please revise the reward function so that the behavior resembles forward running.</span><br><br>
-                        <b>Iteration 2</b>, Eureka reward:
-                        [sep]
-                        assets/rlhf_rewards/humanoid_step1.txt' onclick="populateDemo(this, 2);">
-
-                        <img src="videos/humanoid_rlhf/humanoid-step2.png" width="40%" style="border-radius: 5px;" alt='<b>Iteration 3</b>, Human feedback: <br>
-                        <span style="font-size: 0.8em; line-height: 30px;">The learned behavior now looks like duck walk; 
-                            the legs are indeed alternating but the torso is very low. 
-                            Could you improve the reward function for upright running?</span><br><br>
-                        <b>Iteration 3</b>, Eureka reward:
-                        [sep]
-                        assets/rlhf_rewards/humanoid_step2.txt' onclick="populateDemo(this, 2);">
-
-                        <img src="videos/humanoid_rlhf/humanoid-step3.png" width="40%" style="border-radius: 5px;" alt='<b>Iteration 4</b>, Human feedback: <br>
-                        <span style="font-size: 0.8em; line-height: 30px;">The learned behavior has the robot hopping on one of its foot in order to move forward.
-                            Please revise the reward function to encourage upright running behavior.</span><br><br>
-                        <b>Iteration 4</b>, Eureka reward:
-                        [sep]
-                        assets/rlhf_rewards/humanoid_step3.txt' onclick="populateDemo(this, 2);">
-
-                        <img src="videos/humanoid_rlhf/humanoid-step4.png" width="40%" style="border-radius: 5px;" alt='<b>Iteration 5</b>, Human feedback: <br>
-                        <span style="font-size: 0.8em; line-height: 30px;">This reward function removed the penalty for low torse position that you added last time; could you just add it back in? </span><br><br>
-                        <b>Iteration 5</b>, Eureka reward:
-                        [sep]
-                        assets/rlhf_rewards/humanoid_step4.txt' onclick="populateDemo(this, 2);">
-
-                        <img src="videos/humanoid_rlhf/humanoid-norlhf.png" width="40%" style="border-radius: 5px;" alt='<b>Eureka without RLHF</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/humanoid.txt' onclick="populateDemo(this, 2);">
-
-                    </div>
-                </div>
-                <div class="row border rounded" style="padding-top:12px; padding-bottom:12px;">
-                    <div class="col-md-6">
-                        <video id="demo-video-2" style="border-radius: 5px;" autoplay loop muted webkit-playsinline
-                            playsinline onclick="setAttribute('controls', 'true');">
-                            <source id="expandedImg-2" src="videos/placeholder.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div id="imgtext-2" style="font-size: 1.5em">Select an image above:</div>
-                <div>
-                    <pre
-                        class="p-1"><code class="language-python" id="answer-2">Eureka response shown within code block.</code></pre>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   
+    </section>   
 
 <section class="section" id="BibTeX">
     <div class="container is-max-widescreen content">
         <h2 class="title">BibTeX</h2>
-        <pre><code>@article{ma2023eureka,
-    title   = {Eureka: Human-Level Reward Design via Coding Large Language Models},
-    author  = {Yecheng Jason Ma and William Liang and Guanzhi Wang and De-An Huang and Osbert Bastani and Dinesh Jayaraman and Yuke Zhu and Linxi Fan and Anima Anandkumar},
-    year    = {2023},
-    journal = {arXiv preprint arXiv: Arxiv-2310.12931}
-}
-</code></pre>
+        <pre><code>@misc{katara2023gen2sim,
+            title={Gen2Sim: Scaling up Robot Learning in Simulation with Generative Models}, 
+            author={Pushkal Katara and Zhou Xian and Katerina Fragkiadaki},
+            year={2023},
+            eprint={2310.18308},
+            archivePrefix={arXiv},
+            primaryClass={cs.RO}
+      }</code></pre>
     </div>
 </section>
 
@@ -745,8 +340,7 @@
                         <p>
                             Website template borrowed from <a
                                 href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>,
-                            <a href="https://vimalabs.github.io/">VIMA</a>, and <a
-                                href="https://language-to-reward.github.io/">L2R</a>.
+                            <a href="https://eureka-research.github.io/">Eureka</a>.
                         </p>
                     </div>
                 </div>

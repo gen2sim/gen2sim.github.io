@@ -1,0 +1,20 @@
+A: The following tasks can be performed in this environment:
+
+PressSanitiserTip
+
+Task: PressSanitiserTip
+Task Description: press the tip of the sanitiser
+def compute_reward(env):  
+    # reward function  
+    tip_pose = env.get_pose_by_link_name("sanitiser", "link_0")  
+    gripper_pose = env.get_robot_gripper_pose()  
+    distance_gripper_to_tip = torch.norm(tip_pose - gripper_pose, dim=-1)  
+    tip_state = env.get_state_by_joint_name("sanitiser", "joint_0")  
+    cost = distance_gripper_to_tip - tip_state  
+    reward = - cost  
+  
+    # success condition  
+    target_tip_state = env.get_limits_by_joint_name("sanitiser", "joint_0")["lower"]
+    success = torch.abs(tip_state - target_tip_state) < 0.1  
+  
+    return reward, success  

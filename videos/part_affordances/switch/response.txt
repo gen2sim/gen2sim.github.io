@@ -1,0 +1,42 @@
+A: The following tasks can be performed in this environment:
+
+Turn On the Switch
+Turn Off the Switch
+
+Task: TurnOnSwitch
+Task Description: turn the lever of the switch to the upper limit
+```
+def compute_reward(env):  
+    # reward function  
+    lever_pose = env.get_pose_by_link_name("switch", "link_0")  
+    gripper_pose = env.get_robot_gripper_pose()  
+    distance_gripper_to_lever = torch.norm(lever_pose - gripper_pose, dim=-1)  
+    lever_state = env.get_state_by_joint_name("switch", "joint_0")  
+    cost = distance_gripper_to_lever - lever_state  
+    reward = - cost  
+  
+    # success condition  
+    target_lever_state = env.get_limits_by_joint_name("switch", "joint_0")["upper"]
+    success = torch.abs(lever_state - target_lever_state) < 0.1  
+  
+    return reward, success  
+```
+ 
+Task: TurnOffSwitch
+Task Description: turn the lever of the switch to the lower limit
+```
+def compute_reward(env):  
+    # reward function  
+    lever_pose = env.get_pose_by_link_name("switch", "link_0")  
+    gripper_pose = env.get_robot_gripper_pose()  
+    distance_gripper_to_lever = torch.norm(lever_pose - gripper_pose, dim=-1)  
+    lever_state = env.get_state_by_joint_name("switch", "joint_0")  
+    cost = distance_gripper_to_lever + lever_state  
+    reward = - cost  
+  
+    # success condition  
+    target_lever_state = env.get_limits_by_joint_name("switch", "joint_0")["lower"]
+    success = torch.abs(lever_state - target_lever_state) < 0.1  
+  
+    return reward, success
+```
