@@ -1,0 +1,20 @@
+Task: CloseLeftDoorCabinet
+Task Description: "close the left door of the cabinet"
+```
+def compute_reward(self):
+    # reward function
+    door_handle_pose = self.env.get_pose_by_link_name("cabinet", "link_1")
+    gripper_pose = self.env.get_robot_gripper_pose()
+    distance_gripper_to_handle = torch.norm(gripper_pose - door_handle_pose, dim=-1)
+
+    door_state = self.env.get_state_by_joint_name("cabinet", "joint_1")
+
+    cost = distance_gripper_to_handle + door_state
+    reward = - cost
+
+    # success condition
+    target_door_state = self.env.get_limits_by_joint_name("cabinet", "joint_1")["lower"]
+    success = torch.abs(door_state - target_door_state) < 0.1
+
+    return reward, success
+```

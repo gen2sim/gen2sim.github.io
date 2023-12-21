@@ -1,40 +1,19 @@
-A: The following tasks can be performed in this environment:
-
-Push the Toaster Lever Down
-Pull the Toaster Lever Up
-
 Task: PushToasterLeverDown
-Task Description: push the lever of the toaster down
-def compute_reward(env):  
-    # reward function  
-    lever_pose = env.get_pose_by_link_name("toaster", "link_0")  
-    gripper_pose = env.get_robot_gripper_pose()  
+Task Description: "push the lever of the toaster down"
+```
+def compute_reward(self):  
+    # reward function
+    lever_pose = self.env.get_pose_by_link_name("toaster", "link_0")  
+    gripper_pose = self.env.get_robot_gripper_pose()  
     distance_gripper_to_lever = torch.norm(lever_pose - gripper_pose, dim=-1)  
-    lever_state = env.get_state_by_joint_name("toaster", "joint_0")  
-    cost = distance_gripper_to_lever + lever_state  
-    reward = - cost  
+    lever_state = self.env.get_state_by_joint_name("toaster", "joint_0")  
+    
+    cost = distance_gripper_to_lever + lever_state
+    reward = - cost
   
-    # success condition  
-    target_lever_state = env.get_limits_by_joint_name("toaster", "joint_0")["upper"]
+    # success condition
+    target_lever_state = self.env.get_limits_by_joint_name("toaster", "joint_0")["upper"]
     success = torch.abs(lever_state - target_lever_state) < 0.1  
   
-    return reward, success  
- 
-Task: PullToasterLeverUp
-Task Description: pull the lever of the toaster up
-
-def compute_reward(env):  
-    # reward function  
-    lever_pose = env.get_pose_by_link_name("toaster", "link_0")  
-    gripper_pose = env.get_robot_gripper_pose()  
-    distance_gripper_to_lever = torch.norm(lever_pose - gripper_pose, dim=-1)  
-    lever_state = env.get_state_by_joint_name("toaster", "joint_0")  
-    cost = distance_gripper_to_lever - lever_state  
-    reward = - cost  
-  
-    # success condition  
-    target_lever_state = env.get_limits_by_joint_name("toaster", "joint_0")["lower"]
-    success = torch.abs(lever_state - target_lever_state) < 0.1  
-  
-    return reward, success  
-
+    return reward, success
+```
